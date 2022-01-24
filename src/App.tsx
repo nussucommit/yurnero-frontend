@@ -1,8 +1,13 @@
-import React from "react";
-import "./App.css";
+import { ChakraProvider } from '@chakra-ui/react'
+
+import Pages from 'pages'
 
 function App() {
-  return <div className="App"></div>;
+  return (
+    <ChakraProvider>
+      <Pages />
+    </ChakraProvider>
+  )
 }
 
-export default App;
+export default App
