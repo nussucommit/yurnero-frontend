@@ -1,0 +1,44 @@
+.Banner {
+    position: relative;
+    display: block;
+    text-align: center;
+}
+
+
+.Banner h1 {
+    font-size: 70px;
+    font-weight: bold;
+    position: absolute; 
+    top: 15%;
+    left: 0;
+    right: 0;
+    z-index: 1;
+}
+
+.Banner p {
+    position: absolute;
+    font-size: 23px;
+    top: 42%;
+    left: 20%;
+    right: 20%;
+    z-index: 1;
+}
+
+.Banner btn{
+    position: absolute;
+    background-color: #FFb200;
+    padding: 18px;
+    font-weight: bold;
+    font-size: 15px;
+    top: 65%;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    z-index: 1;
+}
+
+.Banner button:hover{
+    background-color: #fac548;
+}
+
+
