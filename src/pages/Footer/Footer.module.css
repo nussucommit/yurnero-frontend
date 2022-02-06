@@ -18,10 +18,15 @@
     display: flex;
 }
 
+li strong{
+    color: white;
+}
+
 li{
     font-size: 18px;
     padding: 8px 0;
     list-style-type: none;
+    color: #B7B7B7;
 }
 
 .list img{
@@ -32,11 +37,32 @@ li{
     text-align: right;
 }
 
+.support{
+    padding: 32px 10% 8px;
+    text-align: right;
+}
+
+.support p{
+    padding-bottom: 12px;
+    font-size: 1.25rem;
+    color: #B7B7B7;
+}
+
+.support img{
+    display: inline;
+    width: 18%;
+}
+
+.support a{
+    padding: 0;
+}
+
 
 /* footnote */
 .footnote{
     padding: 32px 10% 8px;
     margin: 0;
+    color: #B7B7B7;
 
 }
 

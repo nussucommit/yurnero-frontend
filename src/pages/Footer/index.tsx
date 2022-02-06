@@ -13,7 +13,7 @@ const Footer = () => {
                     <Container>
                         <ul>
                             <li><strong>About Us</strong></li>
-                            <li><Link to='/our-family'>Our family</Link></li>
+                            <li><Link to='/our-family'>Our Family</Link></li>
                             <li><Link to='/vision-mission'>Vision & Mission</Link></li>
                             <li><Link to='/our-structure'>Our Structure</Link></li>
                             <li><Link to='/management committee'>Management Committee</Link></li>
@@ -49,7 +49,7 @@ const Footer = () => {
 
             <div className={styles.support}>
                 <p>Supported by:</p>
-                <Image src="https://www.nussucommit.com/images/acadia.png"></Image>
+                <a href="http://acadia.sg/"><Image src="https://www.nussucommit.com/images/acadia.png"></Image></a>
             </div>
         
 
