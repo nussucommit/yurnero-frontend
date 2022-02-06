@@ -3,10 +3,19 @@
     color: white;
 }
 
+.nav{
+    padding: 32px 10% 16px;
+}
+
 .title{
     font-size: 25px;
     font-weight: bold;
-    padding: 40px;
+    padding: 32px 12px;
+}
+
+
+.list{
+    display: flex;
 }
 
 li{
@@ -15,9 +24,45 @@ li{
     list-style-type: none;
 }
 
-.container{
-    display: inline-block;
-    text-align: center;
-    width: 20%;
-    
+.list img{
+    display: inline;
+}
+
+.img{
+    text-align: right;
+}
+
+
+/* footnote */
+.footnote{
+    padding: 32px 10% 8px;
+    margin: 0;
+
+}
+
+.content{
+    padding-top: 8px;
+    margin: 0px;
+    display: flex;
+    align-items: center;
+    border-top: 1.5px solid #484848;
+    flex-direction: row;
+    justify-content: space-between;
+
+}
+
+.links{
+    padding: 0;
+    margin: 0;
+}
+
+a{
+    padding-right: 15px;
+}
+
+
+.copyright{
+    text-align: right;
+    padding: 20px 0;
+    margin: 0;
 }
