@@ -1,0 +1,43 @@
+.section{
+    display: flex;
+    flex-direction: row;
+    padding: 60px 7%;
+    align-items: left;
+}
+
+.content{
+    margin: none;
+}
+
+.content p{
+    color: #484848;
+    font-size: 1.25rem;
+    line-height: 2rem;
+    padding-bottom: 20px;
+}
+
+.content .link{
+    font-size: 18px;
+    color:#002A56;
+    border-bottom: 2px solid #FFB200;
+    padding: 0;
+    font-size: 1.125rem;
+    font-weight: 600;
+}
+
+.content h1{
+    font-weight: 600;
+    font-size: 3rem;
+    line-height: 3.8rem;
+    color: #002A56;
+    padding-bottom: 20px;
+
+}
+
+.section img{
+    box-shadow: 0 10px 16px 0 rgb(0 0 0 / 25%), 0 6px 20px 0 rgb(0 0 0 / 25%);
+}
+
+.colordiff{
+    background-color: #f0f4f6;
+}
