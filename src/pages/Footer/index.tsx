@@ -14,16 +14,16 @@ const Footer = () => {
                 <strong>About Us</strong>
               </li>
               <li>
-                <Link to="/our-family">Our Family</Link>
+                <Link to="/about-us/our-family">Our Family</Link>
               </li>
               <li>
-                <Link to="/vision-mission">Vision & Mission</Link>
+                <Link to="/about-us/vision-mission">Vision & Mission</Link>
               </li>
               <li>
-                <Link to="/our-structure">Our Structure</Link>
+                <Link to="/about-us/our-structure">Our Structure</Link>
               </li>
               <li>
-                <Link to="/management-committee">Management Committee</Link>
+                <Link to="/about-us/management-committee">Management Committee</Link>
               </li>
             </ul>
           </Container>

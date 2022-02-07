@@ -21,6 +21,7 @@ import TrainingWorkshops from './TrainingWorkshops'
 import Creation from './Creation'
 import Chariteach from './Chariteach'
 import Cyberia from './Cyberia'
+import PDPA from './PDPA'
 const Pages = () => {
   return (
     <BrowserRouter>
@@ -39,6 +40,7 @@ const Pages = () => {
           <Route path="computer-centres" element={<ComputerCentres />} />
           <Route path="external-workshops" element={<ExternalWorkshops />} />
           <Route path="sdp" element={<StudentDevelopementPlatform />} />
+          <Route path="pdpa" element={<PDPA />} />
           <Route path="creation" element={<Creation />} />
           <Route path="chariteach" element={<Chariteach />} />
           <Route path="cyberia" element={<Cyberia />} />
@@ -46,7 +48,7 @@ const Pages = () => {
           <Route path="FAQ" element={<FAQ />} />
           <Route path="feedback" element={<Feedback />} />
           <Route path="contact" element={<Contact />} />
-          <Route path="training-workshop" element={<TrainingWorkshops />} />
+          <Route path="training-workshops" element={<TrainingWorkshops />} />
         </Route>
       </Routes>
     </BrowserRouter>
