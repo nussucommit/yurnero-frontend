@@ -1,10 +1,10 @@
-import styles from './AboutUs.module.css'
+import styles from './AboutUsPage.module.css'
 import { AspectRatio, Button, ButtonGroup, Container } from '@chakra-ui/react'
 import { Image } from '@chakra-ui/react'
 import { Link } from 'react-router-dom'
 
 
-const AboutUs = () => {
+const AboutUsPage = () => {
   return (
     <div className={styles.AboutUs}>
       <div className={styles.TitleBar}>
@@ -25,4 +25,4 @@ const AboutUs = () => {
   )
 }
 
-export default AboutUs
+export default AboutUsPage

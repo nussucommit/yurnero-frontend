@@ -4,7 +4,7 @@ import { Routes as ROUTES } from 'constants/routes'
 
 //Public Pages
 import Home from './Home'
-import AboutUs from './AboutUs'
+import AboutUsPage from './AboutUs/AboutUsPage'
 import ComputerCentres from './ComputerCentres'
 import ExternalWorkshops from './ExternalWorkshops'
 import StudentDevelopementPlatform from './StudentDevelopementPlatform'
@@ -30,7 +30,7 @@ const Pages = () => {
         <Route path="*" element={<Navigate to={ROUTES.index} replace />} />
 
         <Route path="/" element={<Template />}>
-          <Route path="about-us" element={<AboutUs />}>
+          <Route path="about-us" element={<AboutUsPage />}>
             <Route path="our-family" element={<OurFamily />} />
             <Route path="vision-mission" element={<VisionMission />} />
             <Route path="our-structure" element={<OurStructure />} />
