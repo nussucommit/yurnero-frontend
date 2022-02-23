@@ -1,4 +1,3 @@
-import { Box, Button, Center, Flex, Link, Square, Stack, StylesProvider } from '@chakra-ui/react'
 import styles from './Nav.module.css'
 
 const Nav = () => {

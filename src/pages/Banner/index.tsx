@@ -1,6 +1,7 @@
-import { AspectRatio, Button, Image } from '@chakra-ui/react'
-import styles from './Banner.module.css'
 import { useNavigate } from 'react-router-dom'
+import { AspectRatio, Button, Image } from '@chakra-ui/react'
+
+import styles from './Banner.module.css'
 
 const Banner = () => {
   const navigate = useNavigate()

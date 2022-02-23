@@ -1,5 +1,4 @@
-import { BrowserRouter, Routes, Route, Navigate, Link } from 'react-router-dom'
-
+import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom'
 import { Routes as ROUTES } from 'constants/routes'
 
 //Public Pages
@@ -12,7 +11,6 @@ import Events from './Events'
 import FAQ from './FAQ'
 import Feedback from './Feedback'
 import Contact from './Contact'
-import Template from './Template'
 import OurFamily from './AboutUs/OurFamily'
 import VisionMission from './AboutUs/VisionMission'
 import OurStructure from './AboutUs/OurStructure'
@@ -22,6 +20,7 @@ import Creation from './Creation'
 import Chariteach from './Chariteach'
 import Cyberia from './Cyberia'
 import PDPA from './PDPA'
+
 const Pages = () => {
   return (
     <BrowserRouter>
