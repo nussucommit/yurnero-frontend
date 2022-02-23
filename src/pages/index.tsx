@@ -28,7 +28,6 @@ const Pages = () => {
       <Routes>
         <Route path={ROUTES.index} element={<Home />} />
         <Route path="*" element={<Navigate to={ROUTES.index} replace />} />
-
         <Route path="/" element={<Template />}>
           <Route path="about-us" element={<AboutUs />}>
             <Route path="our-family" element={<OurFamily />} />
