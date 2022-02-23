@@ -1,4 +1,4 @@
-.OurFamily{
+.AboutUs{
     font-size: 1.3rem;
     color: #484848;
 }
@@ -31,6 +31,14 @@
 .Content{
     padding: 64px 10px;
     line-height: 1.8em;
+}
+
+.Content h2{
+    color:#002A56;
+    font-size: 1.6rem;
+    border-left: solid 3px #002A56;
+    padding: 10px 32px 10px;
+    margin: 28px 0;
 }
 
 .Content p{
