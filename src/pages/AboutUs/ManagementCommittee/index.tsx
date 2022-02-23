@@ -1,13 +1,13 @@
-import styles from './ManagementComittee.module.css'
+import styles from './ManagementCommittee.module.css'
 import { AspectRatio, Button, ButtonGroup } from '@chakra-ui/react'
 import { Image } from '@chakra-ui/react'
 
-const ManagementComittee = () => {
+const ManagementCommittee = () => {
   return (
-    <div className={styles.ManagementComittee}>
-      <h1>ManagementComittee</h1>
+    <div className={styles.ManagementCommittee}>
+      <h1>ManagementCommittee</h1>
     </div>
   )
 }
 
-export default ManagementComittee
+export default ManagementCommittee
