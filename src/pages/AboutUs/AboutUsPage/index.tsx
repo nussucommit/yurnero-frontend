@@ -11,7 +11,7 @@ const AboutUsPage = () => {
         <div className={styles.NavLinks}>
           <Link to="/">HOME</Link>
           <p>/</p>
-          <Link to="about-us">ABOUT US</Link>
+          <Link to="/about-us">ABOUT US</Link>
         </div>
         <h1>The Story</h1>
       </div>

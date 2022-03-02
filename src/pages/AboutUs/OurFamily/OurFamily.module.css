@@ -7,7 +7,7 @@
     background-color: #002A56;
     color: white;
     /* padding: 24px 86px; */
-    padding: 24px 10%;
+    padding: 24px 6%;
 
 }
 
@@ -29,10 +29,14 @@
 }
 
 .Content{
-    padding: 64px 10px;
+    padding: 64px 20%;
     line-height: 1.8em;
 }
 
 .Content p{
+    margin-bottom: 24px;
+}
+
+img{
     margin-bottom: 24px;
 }

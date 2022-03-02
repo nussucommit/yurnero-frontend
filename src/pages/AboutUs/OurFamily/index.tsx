@@ -9,9 +9,9 @@ const OurFamily = () => {
         <div className={styles.NavLinks}>
           <Link to="/">HOME</Link>
           <p>/</p>
-          <Link to="about-us">ABOUT US</Link>
+          <Link to="/about-us">ABOUT US</Link>
           <p>/</p>
-          <Link to="our-family">OUR FAMILY</Link>
+          <Link to="/about-us/our-family">OUR FAMILY</Link>
         </div>
         <h1>Our Family</h1>
       </div>
