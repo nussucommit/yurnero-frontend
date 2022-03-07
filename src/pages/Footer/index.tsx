@@ -12,7 +12,9 @@ const Footer = () => {
           <Container>
             <ul>
               <li>
-                <strong>About Us</strong>
+                <strong>
+                  <Link to="/about-us">About Us</Link>
+                </strong>
               </li>
               <li>
                 <Link to="/about-us/our-family">Our Family</Link>
@@ -31,7 +33,9 @@ const Footer = () => {
           <Container>
             <ul>
               <li>
-                <strong>Services</strong>
+                <strong>
+                  <Link to="/computer-centres">Services</Link>
+                </strong>
               </li>
               <li>
                 <Link to="/computer-centres">Computer Centres</Link>
@@ -50,7 +54,9 @@ const Footer = () => {
           <Container>
             <ul>
               <li>
-                <strong>Events</strong>
+                <strong>
+                  <Link to="/events">Events</Link>
+                </strong>
               </li>
               <li>
                 <Link to="/cyberia">Cyberia</Link>
