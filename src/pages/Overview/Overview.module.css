@@ -1,0 +1,42 @@
+.Section {
+  display: flex;
+  flex-direction: row;
+  padding: 60px 7%;
+  align-items: left;
+}
+
+.Content {
+  margin: none;
+}
+
+.Content p {
+  color: #484848;
+  font-size: 1.25rem;
+  line-height: 2rem;
+  padding-bottom: 20px;
+}
+
+.Content .Link {
+  font-size: 18px;
+  color: #002a56;
+  border-bottom: 2px solid #ffb200;
+  padding: 0;
+  font-size: 1.125rem;
+  font-weight: 600;
+}
+
+.Content h1 {
+  font-weight: 600;
+  font-size: 3rem;
+  line-height: 3.8rem;
+  color: #002a56;
+  padding-bottom: 20px;
+}
+
+.Section img {
+  box-shadow: 0 10px 16px 0 rgb(0 0 0 / 25%), 0 6px 20px 0 rgb(0 0 0 / 25%);
+}
+
+.Colordiff {
+  background-color: #f0f4f6;
+}

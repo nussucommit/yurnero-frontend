@@ -1,0 +1,89 @@
+.Footer {
+  background-color: #363636;
+  color: white;
+}
+
+.Nav {
+  padding: 32px 10% 16px;
+}
+
+.Title {
+  font-size: 25px;
+  font-weight: bold;
+  padding: 32px 12px;
+}
+
+.List {
+  display: flex;
+}
+
+li strong {
+  color: white;
+}
+
+li {
+  font-size: 18px;
+  padding: 8px 0;
+  list-style-type: none;
+  color: #b7b7b7;
+}
+
+.List img {
+  display: inline;
+}
+
+.Img {
+  text-align: right;
+}
+
+.Support {
+  padding: 32px 10% 8px;
+  text-align: right;
+}
+
+.Support p {
+  padding-bottom: 12px;
+  font-size: 1.25rem;
+  color: #b7b7b7;
+}
+
+.Support img {
+  display: inline;
+  width: 18%;
+}
+
+.Support a {
+  padding: 0;
+}
+
+/* footnote */
+.Footnote {
+  padding: 32px 10% 8px;
+  margin: 0;
+  color: #b7b7b7;
+}
+
+.Content {
+  padding-top: 8px;
+  margin: 0px;
+  display: flex;
+  align-items: center;
+  border-top: 1.5px solid #484848;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.Links {
+  padding: 0;
+  margin: 0;
+}
+
+a {
+  padding-right: 15px;
+}
+
+.Copyright {
+  text-align: right;
+  padding: 20px 0;
+  margin: 0;
+}

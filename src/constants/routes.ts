@@ -1,4 +1,21 @@
 export enum Routes {
-  index = '/',
   // Define your routes here
+  index = '/',
+  aboutUs = '/about-us',
+  ourFamily = '/about-us/our-family',
+  visionMission = '/about-us/vision-mission',
+  ourStructure = '/about-us/our-structure',
+  managementCommittee = '/about-us/management-committee',
+  computerCentres = '/computer-centres',
+  externalWorkshops = '/external-workshops',
+  sdp = '/sdp',
+  pdpa = '/pdpa',
+  creation = '/creation',
+  chariteach = '/chariteach',
+  cyberia = '/cyberia',
+  events = '/events',
+  FAQ = '/FAQ',
+  feedback = '/feedback',
+  contact = '/contact',
+  trainingWorkshops = '/training-workshops',
 }
