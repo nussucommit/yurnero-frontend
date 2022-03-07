@@ -1,94 +1,89 @@
-.footer{
-    background-color: #363636;
-    color: white;
+.Footer {
+  background-color: #363636;
+  color: white;
 }
 
-.nav{
-    padding: 32px 10% 16px;
+.Nav {
+  padding: 32px 10% 16px;
 }
 
-.title{
-    font-size: 25px;
-    font-weight: bold;
-    padding: 32px 12px;
+.Title {
+  font-size: 25px;
+  font-weight: bold;
+  padding: 32px 12px;
 }
 
-
-.list{
-    display: flex;
+.List {
+  display: flex;
 }
 
-li strong{
-    color: white;
+li strong {
+  color: white;
 }
 
-li{
-    font-size: 18px;
-    padding: 8px 0;
-    list-style-type: none;
-    color: #B7B7B7;
+li {
+  font-size: 18px;
+  padding: 8px 0;
+  list-style-type: none;
+  color: #b7b7b7;
 }
 
-.list img{
-    display: inline;
+.List img {
+  display: inline;
 }
 
-.img{
-    text-align: right;
+.Img {
+  text-align: right;
 }
 
-.support{
-    padding: 32px 10% 8px;
-    text-align: right;
+.Support {
+  padding: 32px 10% 8px;
+  text-align: right;
 }
 
-.support p{
-    padding-bottom: 12px;
-    font-size: 1.25rem;
-    color: #B7B7B7;
+.Support p {
+  padding-bottom: 12px;
+  font-size: 1.25rem;
+  color: #b7b7b7;
 }
 
-.support img{
-    display: inline;
-    width: 18%;
+.Support img {
+  display: inline;
+  width: 18%;
 }
 
-.support a{
-    padding: 0;
+.Support a {
+  padding: 0;
 }
-
 
 /* footnote */
-.footnote{
-    padding: 32px 10% 8px;
-    margin: 0;
-    color: #B7B7B7;
-
+.Footnote {
+  padding: 32px 10% 8px;
+  margin: 0;
+  color: #b7b7b7;
 }
 
-.content{
-    padding-top: 8px;
-    margin: 0px;
-    display: flex;
-    align-items: center;
-    border-top: 1.5px solid #484848;
-    flex-direction: row;
-    justify-content: space-between;
-
+.Content {
+  padding-top: 8px;
+  margin: 0px;
+  display: flex;
+  align-items: center;
+  border-top: 1.5px solid #484848;
+  flex-direction: row;
+  justify-content: space-between;
 }
 
-.links{
-    padding: 0;
-    margin: 0;
+.Links {
+  padding: 0;
+  margin: 0;
 }
 
-a{
-    padding-right: 15px;
+a {
+  padding-right: 15px;
 }
 
-
-.copyright{
-    text-align: right;
-    padding: 20px 0;
-    margin: 0;
+.Copyright {
+  text-align: right;
+  padding: 20px 0;
+  margin: 0;
 }

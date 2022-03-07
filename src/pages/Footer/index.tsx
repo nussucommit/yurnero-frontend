@@ -5,10 +5,10 @@ import styles from './Footer.module.css'
 
 const Footer = () => {
   return (
-    <div className={styles.footer}>
-      <div className={styles.nav}>
-        <p className={styles.title}>NUSSU CommIT</p>
-        <div className={styles.list}>
+    <div className={styles.Footer}>
+      <div className={styles.Nav}>
+        <p className={styles.Title}>NUSSU CommIT</p>
+        <div className={styles.List}>
           <Container>
             <ul>
               <li>
@@ -78,7 +78,7 @@ const Footer = () => {
               </li>
             </ul>
           </Container>
-          <Container className={styles.img}>
+          <Container className={styles.Img}>
             <a href="https://facebook.com/NUSSUcommIT/">
               <Image src="/src/images/facebook.png"></Image>
             </a>
@@ -86,20 +86,20 @@ const Footer = () => {
         </div>
       </div>
 
-      <div className={styles.support}>
+      <div className={styles.Support}>
         <p>Supported by:</p>
         <a href="http://acadia.sg/">
           <Image src="https://www.nussucommit.com/images/acadia.png"></Image>
         </a>
       </div>
 
-      <div className={styles.footnote}>
-        <div className={styles.content}>
-          <Container className={styles.links}>
+      <div className={styles.Footnote}>
+        <div className={styles.Content}>
+          <Container className={styles.Links}>
             <Link to="/pdpa">Pesonal Data Protection</Link>
             <Link to="/contact">Contact Us</Link>
           </Container>
-          <Container className={styles.copyright}>
+          <Container className={styles.Copyright}>
             <p>© 2022 National University of Singapore Students' Union Committee for Information Technology</p>
           </Container>
         </div>
