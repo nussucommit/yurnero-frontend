@@ -1,6 +1,6 @@
-import { Container, Link } from '@chakra-ui/react'
 import { setDefaultResultOrder } from 'dns'
 import styles from './VisionMission.module.css'
+import { Link } from 'react-router-dom'
 
 const VisionMission = () => {
   return (

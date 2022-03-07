@@ -1,5 +1,5 @@
-import { Link, Image } from '@chakra-ui/react'
-
+import { Image } from '@chakra-ui/react'
+import { Link } from 'react-router-dom'
 import styles from './OurFamily.module.css'
 
 const OurFamily = () => {
