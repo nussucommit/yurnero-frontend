@@ -40,3 +40,30 @@
 img{
     margin-bottom: 24px;
 }
+
+/* small screen compatibility*/
+@media screen and (max-width: 1000px) {
+    .TitleBar h1{
+        font-size: 50px;
+    } 
+    
+    .TitleBar {
+        padding: 24px;
+    }
+    
+    .Content h2{
+        font-size: 2rem;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .TitleBar h1{
+        font-size: 40px;
+    }
+
+    .Content{
+        margin: 0 !important;
+        padding-left: 24px !important;
+        padding-right: 24px !important;
+    }
+}
