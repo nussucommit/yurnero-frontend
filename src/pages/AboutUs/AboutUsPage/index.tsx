@@ -1,7 +1,5 @@
 import { Link } from 'react-router-dom'
-
 import { Container } from '@chakra-ui/react'
-
 import styles from './AboutUsPage.module.css'
 
 const AboutUsPage = () => {

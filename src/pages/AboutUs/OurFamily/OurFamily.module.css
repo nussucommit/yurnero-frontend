@@ -54,6 +54,11 @@ img{
     .Content h2{
         font-size: 2rem;
     }
+
+    .OurFamily{
+        font-size: 1.3rem;
+    }
+
 }
 
 @media screen and (max-width: 800px) {
