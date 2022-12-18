@@ -1,0 +1,26 @@
+.headerContainer {
+    padding: 20px 150px;
+}
+
+.header {
+    display: grid;
+    margin-bottom: 10px;
+    grid-template-columns: 1fr 2fr 1fr;
+}
+
+.image {
+    max-height: 120px;
+    max-width: 220px;
+    height: auto;
+    width: auto;
+}
+
+.searchBar {
+    font-size: larger;
+    margin: auto;
+}
+
+.searchInput {
+    display: flex;
+    justify-content: space-evenly;
+}

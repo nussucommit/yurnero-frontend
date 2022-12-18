@@ -1,0 +1,26 @@
+.Nav {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    justify-content: center;
+    background-color: darkblue;
+}
+
+.NavItem {
+    padding: 20px 20px;
+    color: white;
+    text-align: center;
+    border: black;
+    display: flex;
+    justify-content: center;
+    border-width: 0.5px;
+    border-style: solid;
+}
+
+.NavTitle {
+    color: white;
+    font-weight: bold;
+}
+
+.NavSubtitle {
+    color: gray
+}
