@@ -14,7 +14,7 @@ const Header = () => {
             <div className={styles.header}>
                 <Container classNames={styles.image}>
                     <a href="/">
-                        <Image src="/public/images/logo.png"></Image>
+                        <Image src={require('./logo.png')}></Image>
                     </a>
                 </Container>
                 <Navbar />
