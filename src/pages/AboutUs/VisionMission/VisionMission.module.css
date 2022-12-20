@@ -80,6 +80,7 @@
 
 .Scroll {
   margin: auto;
+  margin-top: 20%;
   width: 50%;
   height: 60%;
   color: #002a56;
@@ -90,4 +91,43 @@
 .Scroll:hover {
   transform: rotate(360deg);
   opacity: 1;
+}
+
+@media screen and (max-width: 768px) {
+  .VisionImage,
+  .MissionImage {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .VisionMission {
+    font-size: 1rem;
+  }
+
+  li {
+    font-size: 1rem;
+  }
+
+  .VisionImage {
+    margin-top: 30px;
+  }
+
+  .Telescope {
+    width: 70%;
+    height: 65%;
+  }
+
+  .MissionImage {
+    margin-top: 60px;
+  }
+
+  .Scroll {
+    width: 75%;
+    height: 55%;
+  }
+
+  .Content {
+    line-height: 1.3rem;
+  }
 }
