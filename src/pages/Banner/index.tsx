@@ -11,18 +11,28 @@ const Banner = () => {
       <p>
         From providing IT training workshops to operating 2 computer centres, NUSSU commIT serves the NUS community by
         providing quality IT services.
+       <br />
+       <br />
+              <Button className={styles.btn} colorScheme="yellow" onClick={() => navigate('/about-us')}>
+                      LEARN MORE
+              </Button>
+
+
       </p>
+
+
+
+
       <AspectRatio maxW="100%" ratio={8 / 3}>
         <Image
           className={styles.Img}
-          src="https://i0.wp.com/pisceswellness.com.sg/wp-content/uploads/2020/12/placeholder.png?ssl=1"
+          src="https://www.nussucommit.com/images/homepage/front.jpg"
           alt="group photo"
           objectFit="cover"
         />
       </AspectRatio>
-      <Button className={styles.btn} colorScheme="yellow" onClick={() => navigate('/about-us')}>
-        LEARN MORE
-      </Button>
+
+
     </div>
   )
 }

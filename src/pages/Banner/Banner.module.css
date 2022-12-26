@@ -12,6 +12,7 @@
   left: 0;
   right: 0;
   z-index: 1;
+  color: #ffffff;
 }
 
 .Banner p {
@@ -21,10 +22,11 @@
   left: 20%;
   right: 20%;
   z-index: 1;
+  color: #ffffff;
 }
 
 .Banner btn {
-  position: absolute;
+  position: relative;
   background-color: #ffb200;
   padding: 18px;
   font-weight: bold;
