@@ -22,6 +22,11 @@
     border-style: solid;
 }
 
+.NavItem:hover {
+    transition: 1s;
+    background-color: black;
+}
+
 .NavTitle {
     color: white;
     font-weight: bold;
