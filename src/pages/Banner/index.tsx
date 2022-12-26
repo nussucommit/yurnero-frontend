@@ -13,17 +13,12 @@ const Banner = () => {
         providing quality IT services.
        <br />
        <br />
-              <Button className={styles.btn} colorScheme="yellow" onClick={() => navigate('/about-us')}>
-                      LEARN MORE
-              </Button>
-
-
+      <Button className={styles.btn} colorScheme="yellow" onClick={() => navigate('/about-us')}>
+        LEARN MORE
+      </Button>
       </p>
 
-
-
-
-      <AspectRatio maxW="100%" ratio={8 / 3}>
+     <AspectRatio maxW="100%" ratio={8 / 3}>
         <Image
           className={styles.Img}
           src="https://www.nussucommit.com/images/homepage/front.jpg"
@@ -31,7 +26,6 @@ const Banner = () => {
           objectFit="cover"
         />
       </AspectRatio>
-
 
     </div>
   )
