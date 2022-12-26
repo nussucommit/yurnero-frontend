@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom'
 import { Image, Container } from '@chakra-ui/react'
 import { syncBuiltinESMExports } from 'module'
+import { ArrowForwardIcon } from '@chakra-ui/icons'
 
 import styles from './Overview.module.css'
 
@@ -17,7 +18,7 @@ const Overview = () => {
               members will conduct workshops for you to learn such skills and stay relevant in this digital world.
             </p>
             <Link to="/training-workshops" className={styles.Link}>
-              WORKSHOPS OFFERED
+              WORKSHOPS OFFERED <ArrowForwardIcon />
             </Link>
           </Container>
         </div>
@@ -41,7 +42,7 @@ const Overview = () => {
                 learn and share the fun at the same time!
               </p>
               <Link to="/events" className={styles.Link}>
-                FIND AN EVENT
+                FIND AN EVENT <ArrowForwardIcon />
               </Link>
             </Container>
           </div>
@@ -59,7 +60,7 @@ const Overview = () => {
               face any problems.
             </p>
             <Link to="/training-workshops" className={styles.Link}>
-              LOCATE OUR CENTRES
+              LOCATE OUR CENTRES <ArrowForwardIcon />
             </Link>
           </Container>
         </div>

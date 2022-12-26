@@ -20,9 +20,9 @@ const Banner = () => {
           objectFit="cover"
         />
       </AspectRatio>
-      {/* <Button className={styles.btn} colorScheme="yellow" onClick={() => navigate('/about-us')}>
+      <Button className={styles.btn} colorScheme="yellow" onClick={() => navigate('/about-us')}>
         LEARN MORE
-      </Button> */}
+      </Button>
     </div>
   )
 }
