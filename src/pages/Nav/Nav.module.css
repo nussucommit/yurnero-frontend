@@ -8,6 +8,7 @@
     grid-template-columns: 1fr 1fr 1fr 1fr;
     justify-content: center;
     width: 1300px;
+    max-width: 100%;
     margin: 0 auto;
 }
 
@@ -34,4 +35,11 @@
 
 .NavSubtitle {
     color: gray
+}
+
+@media screen and (max-width: 746px) {
+    .Nav {
+        display: flex;
+        flex-direction: column;
+    }
 }

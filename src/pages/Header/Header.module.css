@@ -4,6 +4,7 @@
 
 .headerInnerContainer {
     width:  1300px;
+    max-width: 100%;
     margin: 0 auto;
 }
 
@@ -16,11 +17,11 @@
 }
 
 .image {
-    max-height: 120px;
-    max-width: 220px;
+    height: 120px;
+    width: 220px;
     padding-top: 5px;
-    height: auto;
-    width: auto;
+    /* height: auto;
+    width: auto; */
 }
 
 .searchBar {
