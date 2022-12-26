@@ -28,10 +28,14 @@ const VisionMission = () => {
           <div className={'col-md-7 ' + styles.VisionContent}>
             <h2>Our Vision</h2>
             <div className={styles.Underline + ' mx-auto'}></div>
-            <p>
-              To prepare the NUS community for the future by equipping them with the necessary{' '}
-              <strong>IT skills</strong>.
-            </p>
+            <ul>
+              <li>
+                <span>
+                  To prepare the NUS community for the future by equipping them with the necessary{' '}
+                  <strong>IT skills</strong>.
+                </span>
+              </li>
+            </ul>
           </div>
         </div>
         <div className={styles.Mission + ' row'}>
@@ -40,15 +44,21 @@ const VisionMission = () => {
             <div className={styles.Underline + ' mx-auto'}></div>
             <ul>
               <li>
-                Provide top quality <strong>IT services</strong> that supports the functioning of the members of the NUS
-                community.
+                <span>
+                  Provide top quality <strong>IT services</strong> that supports the functioning of the members of the
+                  NUS community.
+                </span>
               </li>
               <li>
-                Provide the NUS community with opportunities to pick up relevant <strong>IT skills</strong>.
+                <span>
+                  Provide the NUS community with opportunities to pick up relevant <strong>IT skills</strong>.
+                </span>
               </li>
               <li>
-                Adapt to an ever-changing world and spearhead innovation in the
-                <strong> IT field</strong> in the NUS community.
+                <span>
+                  Adapt to an ever-changing world and spearhead innovation in the
+                  <strong> IT field</strong> in the NUS community.
+                </span>
               </li>
             </ul>
           </div>

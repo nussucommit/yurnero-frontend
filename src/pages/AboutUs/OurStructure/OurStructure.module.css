@@ -39,6 +39,7 @@
 .OurStructure img {
   width: 80%;
   margin: 40px auto;
+  border-radius: 1%;
   box-shadow: 0 10px 16px 0 rgb(0 0 0 / 25%), 0 6px 20px 0 rgb(0 0 0 / 25%);
 }
 

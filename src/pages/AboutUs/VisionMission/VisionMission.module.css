@@ -51,8 +51,14 @@
 }
 
 .Content div p {
-  margin-bottom: 80px;
   text-align: justify;
+}
+
+.VisionContent ul li {
+  list-style-image: url('./binoculars.png');
+  color: #484848;
+  text-align: justify;
+  margin-bottom: 80px;
 }
 
 .Telescope {
@@ -77,7 +83,7 @@
 
 .MissionContent ul li {
   text-align: justify;
-  list-style: none;
+  list-style-image: url('./scroll.png');
   color: #484848;
 }
 
@@ -102,6 +108,10 @@
 
 strong {
   color: #0a0a0a !important;
+}
+
+span {
+  margin-left: 0.5%;
 }
 
 @media screen and (max-width: 768px) {
