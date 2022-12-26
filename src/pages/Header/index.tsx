@@ -3,7 +3,6 @@ import { useState } from "react"
 import { Image, Input, Button } from '@chakra-ui/react'
 import { HamburgerIcon } from "@chakra-ui/icons"
 import { Search2Icon, CloseIcon } from '@chakra-ui/icons'
-
 import styles from './Header.module.css'
 import BurgerHeader from "pages/BurgerHeader"
 
@@ -41,7 +40,7 @@ const Header = () => {
                             </button>
                             :
                             <button onClick={() => {setOpenBurgerMenu(true)}}>
-                                <HamburgerIcon />
+                                <HamburgerIcon boxSize={6}/>
                             </button> 
                         }
                     </div>
