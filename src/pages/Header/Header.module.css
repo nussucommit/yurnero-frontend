@@ -1,5 +1,5 @@
 .headerContainer {
-    padding: 30px 150px;
+    padding: 30px 100px;
 }
 
 .headerInnerContainer {
@@ -32,4 +32,22 @@
 .searchInput {
     display: flex;
     justify-content: space-evenly;
+}
+
+.DrawerHeader {
+    display: none;
+}
+
+@media screen and (max-width: 1279px) {
+    .DrawerHeader {
+        display: block;
+    }
+
+    .Navbar {
+        display: none;
+    }
+
+    .searchBar {
+        display: none;
+    }
 }
