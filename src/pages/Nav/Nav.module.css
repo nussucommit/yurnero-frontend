@@ -1,0 +1,31 @@
+.Section {
+  display: flex;
+  flex-direction: row;
+  padding: 0px 7%;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.Content {
+  margin: none;
+  width: -webkit-fill-available;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
+.Content p {
+  color: #f0f4f6;
+  font-size: 1.25rem;
+  line-height: 2rem;
+  padding-bottom: 0px;
+}
+
+.Content p.info {
+  font-size: 1rem;
+  color: rgba(255, 255, 255, 0.7) !important;
+}
+
+.Colordiff {
+  background-color: #002a56;
+}
