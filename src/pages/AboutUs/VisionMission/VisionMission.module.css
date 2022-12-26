@@ -31,7 +31,8 @@
   height: 4px;
   width: 8rem;
   margin-bottom: 10px;
-  background-color: #002a56;
+  background-color: #0a0a0a;
+  opacity: 0.5;
 }
 
 .Content {
@@ -41,10 +42,12 @@
 
 .Content div h2 {
   color: #002a56;
-  font-size: 44px;
+  font-size: 40px;
   margin: 30px 0;
-  font-weight: 700px;
+  margin-bottom: 15px;
   text-align: center;
+  font-weight: 700;
+  opacity: 0.95;
 }
 
 .Content div p {
@@ -66,6 +69,10 @@
 .Telescope:hover {
   transform: scale(1.2);
   opacity: 1;
+}
+
+.MissionContent ul {
+  margin: 5px 0;
 }
 
 .MissionContent ul li {
@@ -91,6 +98,10 @@
 .Scroll:hover {
   transform: rotate(360deg);
   opacity: 1;
+}
+
+strong {
+  color: #0a0a0a !important;
 }
 
 @media screen and (max-width: 768px) {
