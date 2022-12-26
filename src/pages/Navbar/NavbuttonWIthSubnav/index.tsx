@@ -30,7 +30,7 @@ const NavbuttonWithSubnav = ({title, path, subNav}: NavbuttonWithSubnavProps) =>
                 mx={2}
                 my={5}
                 py={[1, 1, 2]}
-                px={2}
+                px={1.5}
                 borderRadius={5}
                 _hover={{ bg: useColorModeValue("#fac548", "#fac548") }}
                 fontWeight="bold"

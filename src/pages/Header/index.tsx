@@ -11,32 +11,32 @@ const Header = () => {
 
     return (
         <div className={styles.headerContainer}>
-            <div className={styles.header}>
-                <Container classNames={styles.image}>
-                    <a href="/">
+            <div className={styles.headerInnerContainer}>
+                <div className={styles.header}>
+                    <a href="/" className={styles.image}>
                         <Image src={require('./logo.png')}></Image>
                     </a>
-                </Container>
-                <Navbar />
-                <div className={styles.searchBar}>
-                    {isSearchBarOpen ?
-                    (
-                        <button onClick={() => setIsSearchBarOpen(false)}><CloseIcon/></button>
-                    )
-                    :
-                    (
-                        <button onClick={() => setIsSearchBarOpen(true)}><Search2Icon/></button>
-                    )}
+                    <Navbar />
+                    <div className={styles.searchBar}>
+                        {isSearchBarOpen ?
+                        (
+                            <button onClick={() => setIsSearchBarOpen(false)}><CloseIcon/></button>
+                        )
+                        :
+                        (
+                            <button onClick={() => setIsSearchBarOpen(true)}><Search2Icon/></button>
+                        )}
+                    </div>
                 </div>
+                {isSearchBarOpen &&
+                <div className={styles.searchInput}>
+                    <Input placeholder="What are you looking for?" value={inputValue} onChange={e => setInputValue(e.target.value)}/>
+                    <Button className={styles.btn} colorScheme="yellow" onClick={(val) => {console.log(inputValue)}}>
+                        Search
+                    </Button>
+                </div>
+                }
             </div>
-            {isSearchBarOpen &&
-            <div className={styles.searchInput}>
-                <Input placeholder="What are you looking for?" value={inputValue} onChange={e => setInputValue(e.target.value)}/>
-                <Button className={styles.btn} colorScheme="yellow" onClick={(val) => {console.log(inputValue)}}>
-                    Search
-                </Button>
-            </div>
-            }
         </div>
     )
 }

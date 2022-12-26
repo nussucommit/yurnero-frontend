@@ -1,8 +1,14 @@
+.NavContainer {
+    padding: 20 0px;
+    background-color: darkblue;
+}
+
 .Nav {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     justify-content: center;
-    background-color: darkblue;
+    width: 1300px;
+    margin: 0 auto;
 }
 
 .NavItem {

@@ -31,17 +31,19 @@ const NavInfo: NavInfoProps[] = [
 
 const Nav = () => {
   return (
-    <div className={styles.Nav}>
-      {
-        NavInfo.map((info, idx) => (
-          <div key={idx} className={styles.NavItem}>
-            <a href={info.path}>
-              <div className={styles.NavTitle}>{info.title}</div>
-              <div className={styles.NavSubtitle}>{info.subtitle}</div>
-            </a>
-          </div>
-        ))
-      }
+    <div className={styles.NavContainer}>
+      <div className={styles.Nav}>
+        {
+          NavInfo.map((info, idx) => (
+            <div key={idx} className={styles.NavItem}>
+              <a href={info.path}>
+                <div className={styles.NavTitle}>{info.title}</div>
+                <div className={styles.NavSubtitle}>{info.subtitle}</div>
+              </a>
+            </div>
+          ))
+        }
+      </div>
     </div>
   )
 }
