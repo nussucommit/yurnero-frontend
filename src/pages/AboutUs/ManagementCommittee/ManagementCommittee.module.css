@@ -1,29 +1,173 @@
-.ManagementCommittee{
-    font-size: 1.3rem;
-    color: #484848;
+@import url('https://fonts.googleapis.com/css2?family=Bellota+Text:wght@400;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.TitleBar{
-    background-color: #002A56;
-    color: white;
-    /* padding: 24px 86px; */
-    padding: 24px 6%;
-
+.ManagementCommittee {
+  font-size: 1.3rem;
+  color: #484848;
 }
 
-.TitleBar h1{
-    font-weight: 600;
-    font-size: 54px;
+.TitleBar {
+  background-color: #002a56;
+  color: white;
+  /* padding: 24px 86px; */
+  padding: 24px 6%;
 }
 
-.NavLinks{
-    display: flex;
-    text-align: left;
-    font-size: 0.75em;
-    padding-top: 12px;
-    padding-bottom: 20px;
+.TitleBar h1 {
+  font-weight: 600;
+  font-size: 54px;
 }
 
-.NavLinks p{
-    padding-right: 15px;
+.NavLinks {
+  display: flex;
+  text-align: left;
+  font-size: 0.75em;
+  padding-top: 12px;
+  padding-bottom: 20px;
+}
+
+.NavLinks p {
+  padding-right: 15px;
+}
+
+.MainBody {
+  margin-top: 2%;
+  font-family: 'Bellota Text', cursive;
+  min-height: 100vh;
+  width: 100%;
+  padding: 64px 20%;
+  line-height: 1.8em;
+}
+
+.DirectorContainer {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  margin-bottom: 20px;
+}
+
+.MemberContainer {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.MemberBox {
+  margin: 20px 10px;
+  background: linear-gradient(to bottom right, rgb(210, 220, 233, 0.2), #ffffff);
+}
+
+.ImageBox {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  margin: 0 auto;
+  position: relative;
+  overflow: hidden;
+}
+
+.ImageBox img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.Card {
+  width: 85%;
+  background-color: #fefefe;
+  margin: 0 auto;
+  box-shadow: 0.6em 0.7em 1em #d2dce9, -0.6em -0.5em 0.7em #ffffff;
+  border-radius: 20px;
+  position: relative;
+}
+
+.Icon {
+  position: absolute;
+  width: 3rem;
+  height: 2rem;
+  top: 0;
+  left: 0;
+}
+
+.IconImage {
+  transform: rotate(-10deg);
+}
+
+.DirectorContainer .Card {
+  width: 100%;
+}
+
+.PositionBox {
+  width: 80%;
+  background-color: #002a56;
+  text-align: center;
+  margin: 0 auto;
+  padding: 1px 2px;
+  margin-bottom: 5px;
+  border-radius: 20px;
+}
+
+.Position {
+  color: #ffffff;
+  text-align: center;
+  font-size: 1.4rem;
+  font-weight: bold;
+}
+
+.Name {
+  font-size: 1.2rem;
+  font-weight: bold;
+  text-align: center;
+  letter-spacing: 1;
+}
+
+.Faculty,
+.Year {
+  font-size: 1rem;
+  color: #484848;
+  opacity: 0.9;
+  margin-top: 3px;
+  text-align: center;
+}
+
+@media screen and (max-width: 900px) {
+  .Icon {
+    width: 2rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .DirectorContainer {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .ImageBox {
+    width: 150px;
+    height: 150px;
+  }
+
+  .Icon {
+    width: 2rem;
+    height: 1rem;
+  }
+
+  .Position,
+  .Name {
+    font-size: 1.1rem;
+  }
+
+  .Faculty,
+  .Year {
+    font-size: 0.8rem;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .Icon {
+    width: 1.5rem;
+  }
 }
