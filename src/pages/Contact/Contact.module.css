@@ -1,0 +1,117 @@
+.Contact{
+    font-size: 1.3rem;
+    color: #484848;
+}
+.Main{
+    padding-top: 75px;
+    padding-left: 160px;
+    padding-right: 60px;
+}
+.LinkBar{
+    background-color:white;
+    color: gray;
+    /* padding: 24px 86px; */
+    padding: 24px 6%;
+    font-weight: 480;
+
+}
+.LinkBar h1{
+    font-weight: 600;
+    font-size: 54px;
+}
+
+.TitleBar{
+    background-color:white;
+    /* padding: 24px 86px; */
+    padding-top: 0px;
+    padding-left: 6.5%;
+    line-height: 5.5rem;
+
+}
+
+.TitleBar h1{
+    font-weight: 600;
+    font-size: 90px;
+    letter-spacing: -0.4rem;
+}
+
+.NavLinks{
+    display: flex;
+    text-align: left;
+    font-size: 0.75em;
+    padding-top: 12px;
+    padding-bottom: 20px;
+}
+
+.NavLinks p{
+    padding-right: 15px;
+}
+
+.Content{
+    padding-top: 75px;
+    padding-left: 75px;
+    padding-right: 10rem;
+    line-height: 1rem
+}
+
+.Content p{
+    margin-bottom: 24px;
+}
+
+.Details{
+    line-height:1rem;
+    margin-bottom: 3rem;
+}
+
+.Details h2{
+    color: #002A56;
+    font-weight: 500;
+    font-size: 25px;
+    margin-bottom: 1.5rem;
+}
+
+.Details p{
+    color: #484848;
+    font-size: 20px;
+    margin-bottom:15px;
+}
+
+.Details h3{
+    color: #484848;
+    font-size: 15px;
+    margin-top:30px;
+}
+
+.Details h4{
+    color: #002A56;
+    font-weight: 500;
+    font-size: 20px;
+    margin-top: 2rem;
+    text-decoration: underline #FFB200;
+}
+.Details h4:hover{
+    color: gray;
+    text-decoration: underline gray;
+}
+
+.Details a{
+    color: #4372D6;
+}
+.Details a:visited{
+    color: #551A8B; 
+}
+
+.Mailing{
+    margin-top: 1.5rem;
+}
+
+.Mailing h2{
+    color: #002A56;
+    font-weight: 500;
+    font-size: 27px;
+    margin-bottom: 2rem;
+}
+
+.Space{
+    margin-top: 150px;
+}
