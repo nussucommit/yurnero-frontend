@@ -1,0 +1,53 @@
+.headerContainer {
+    padding: 30px 100px;
+}
+
+.headerInnerContainer {
+    width:  1300px;
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+.header {
+    display: grid;
+    align-items: center;
+    margin-bottom: 10px;
+    grid-template-columns: 1fr 4fr 1fr;
+    grid-auto-rows: 60px;
+}
+
+.image {
+    height: 120px;
+    width: 220px;
+    padding-top: 5px;
+    /* height: auto;
+    width: auto; */
+}
+
+.searchBar {
+    font-size: larger;
+    margin: auto;
+}
+
+.searchInput {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.DrawerHeader {
+    display: none;
+}
+
+@media screen and (max-width: 1279px) {
+    .DrawerHeader {
+        display: block;
+    }
+
+    .Navbar {
+        display: none;
+    }
+
+    .searchBar {
+        display: none;
+    }
+}
