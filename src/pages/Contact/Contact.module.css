@@ -3,27 +3,27 @@
     color: #484848;
 }
 .Main{
-    padding-top: 75px;
-    padding-left: 160px;
-    padding-right: 60px;
+    padding-top: 13vh;
+    padding-left: 13vw;
+    padding-right: 5vw;
 }
 .LinkBar{
     background-color:white;
     color: gray;
     /* padding: 24px 86px; */
-    padding: 24px 6%;
+    padding: 2vw 6%;
     font-weight: 480;
 
 }
 .LinkBar h1{
     font-weight: 600;
-    font-size: 54px;
+    font-size: 3.4rem;
 }
 
 .TitleBar{
     background-color:white;
     /* padding: 24px 86px; */
-    padding-top: 0px;
+    padding-top: 0vh;
     padding-left: 6.5%;
     line-height: 5.5rem;
 
@@ -31,7 +31,7 @@
 
 .TitleBar h1{
     font-weight: 600;
-    font-size: 90px;
+    font-size: 5.6rem;
     letter-spacing: -0.4rem;
 }
 
@@ -39,23 +39,23 @@
     display: flex;
     text-align: left;
     font-size: 0.75em;
-    padding-top: 12px;
-    padding-bottom: 20px;
+    padding-top: 2.2vh;
+    padding-bottom: 3.5vh;
 }
 
 .NavLinks p{
-    padding-right: 15px;
+    padding-right: 2.35px;
 }
 
 .Content{
-    padding-top: 75px;
-    padding-left: 75px;
+    padding-top: 13.4vh;
+    padding-left: 5.8vw;
     padding-right: 10rem;
     line-height: 1rem
 }
 
 .Content p{
-    margin-bottom: 24px;
+    margin-bottom: 4.3vh;
 }
 
 .Details{
@@ -66,26 +66,26 @@
 .Details h2{
     color: #002A56;
     font-weight: 500;
-    font-size: 25px;
+    font-size: 1.6rem;
     margin-bottom: 1.5rem;
 }
 
 .Details p{
     color: #484848;
-    font-size: 20px;
-    margin-bottom:15px;
+    font-size: 1.25rem;
+    margin-bottom: 2.7vh;
 }
 
 .Details h3{
     color: #484848;
-    font-size: 15px;
-    margin-top:30px;
+    font-size: 0.9rem;
+    margin-top: 5.4vh;
 }
 
 .Details h4{
     color: #002A56;
     font-weight: 500;
-    font-size: 20px;
+    font-size: 1.25rem;
     margin-top: 2rem;
     text-decoration: underline #FFB200;
 }
@@ -108,10 +108,10 @@
 .Mailing h2{
     color: #002A56;
     font-weight: 500;
-    font-size: 27px;
+    font-size: 1.7rem;
     margin-bottom: 2rem;
 }
 
 .Space{
-    margin-top: 150px;
+    margin-top: 27vh;
 }
