@@ -3,22 +3,99 @@ import { Image, Container } from '@chakra-ui/react'
 import { syncBuiltinESMExports } from 'module'
 
 import styles from './Overview.module.css'
+import { useState } from 'react'
+import axios from 'axios'
+import React from 'react'
+import { relative } from 'path'
+
+const BACKEND_API_HOME_ROUTE = "http://localhost:8000/";
+const COMMIT_HOST_URL = "https://www.nussucommit.com"
+const TRAINING_WORKSHOP_ROUTE = "home/training-workshops/"
+const ELEVATE_CREATIVITY_ROUTE = "home/elevate-the-creativity/"
+const COMPUTER_CENTER_ROUTE = "home/study-print-scan/"
+
+const getDataFromResource = async (route: string) => {
+  let data:any[] = []
+  try{
+    data = await (await axios.get(BACKEND_API_HOME_ROUTE + route, {})).data
+  } catch(err){
+    console.log(err)
+  }
+  let header = "";
+  let body = [];
+  console.log(data);
+  if(data.length !== 0) {
+    for(let i = 0; i < data[0].length; i++){
+      const item = data[0][i]
+      if(item.type == "heading"){
+        header += item.content
+      }else if(item.type == "paragraph"){
+        let content = item.content;
+        for(let j = 0; j < content.length; j++){
+          let currItem = content[j];
+          let url = "";
+          if('link' in currItem.attribute){
+            url = currItem.attribute.link;
+          }
+          const newObject = {content: currItem.content, url};
+          body.push(newObject);
+        }
+        
+      }
+    }
+  }
+
+  
+  return {header, body};
+}
 
 const Overview = () => {
+  const [trainingWorkshopData, setTrainingWorkshopData] = useState({header: "", body:[{content:"", url:""}]})
+  const [elevateCreativityData, setElevateCreativityData] = useState({header: "", body:[{content:"", url:""}]})
+  const [computerCenterData, setComputerCenterData] = useState({header: "", body:[{content:"", url:""}]})
+
+  React.useEffect(() =>{
+    const trainingWorkshopData =  getDataFromResource(TRAINING_WORKSHOP_ROUTE).then(data => {
+      setTrainingWorkshopData(data);
+      
+    });
+    const elevateCreativityData = getDataFromResource(ELEVATE_CREATIVITY_ROUTE).then(data => {
+      setElevateCreativityData(data);
+    });
+    const computerCenterData = getDataFromResource(COMPUTER_CENTER_ROUTE).then(data => {
+      setComputerCenterData(data);
+
+    });
+  }, []);
+  const dataToDisplayMapper = (data : any)=>{
+    if(data.url !== ""){
+      let absoluteURL = data.url;
+      const relativeURL = absoluteURL.slice(COMMIT_HOST_URL.length);
+
+      return <Link to={relativeURL} className={styles.Link}>
+        {data.content}
+      </Link>
+    } else{
+      return <p>
+        {data.content}
+      </p>
+    }
+  }
+  const trainingWorkshopContentDisplay = trainingWorkshopData.body.map(dataToDisplayMapper);
+  const elevateCreativityContentDisplay = elevateCreativityData.body.map(dataToDisplayMapper);
+  const computerCenterContentDisplay = computerCenterData.body.map(dataToDisplayMapper);
+
   return (
     <div className={styles.Overview}>
       <div className={styles.Section}>
         <div className={styles.Content}>
           <Container>
             <p>TRAINING WORKSHOP</p>
-            <h1>Explore more through our workshops</h1>
-            <p>
-              Want to learn more about graphic design or navigating Excel like a pro? Fret not! Our own Training Cell
-              members will conduct workshops for you to learn such skills and stay relevant in this digital world.
-            </p>
-            <Link to="/training-workshops" className={styles.Link}>
+            <h1>{trainingWorkshopData.header}</h1>
+            {trainingWorkshopContentDisplay}
+            {/* <Link to="/training-workshops" className={styles.Link}>
               WORKSHOPS OFFERED
-            </Link>
+            </Link> */}
           </Container>
         </div>
         <Container>
@@ -34,15 +111,11 @@ const Overview = () => {
           <div className={styles.Content}>
             <Container>
               <p>ELEVATE THE CREATIVITY</p>
-              <h1>Major Events</h1>
-              <p>
-                Every year, we organise 3 major events that are designed to ignite and raise the creativity of NUS
-                students to the next level. They are Cyberia Camp, CREATION and charITeach and are designed to help you
-                learn and share the fun at the same time!
-              </p>
-              <Link to="/events" className={styles.Link}>
+              <h1>{elevateCreativityData.header}</h1>
+              {elevateCreativityContentDisplay}
+              {/* <Link to="/events" className={styles.Link}>
                 FIND AN EVENT
-              </Link>
+              </Link> */}
             </Container>
           </div>
         </div>
@@ -52,15 +125,11 @@ const Overview = () => {
         <div className={styles.Content}>
           <Container>
             <p>STUDY, PRINT OR SCAN</p>
-            <h1>Our Computer Centres</h1>
-            <p>
-              We manage 2 computer centres at YIH and AS8 to serve your daily IT needs! We provide printing and scanning
-              facilities to help in your studies in NUS. Our friendly supervisors are also ready to assist you if you
-              face any problems.
-            </p>
-            <Link to="/training-workshops" className={styles.Link}>
+            <h1>{computerCenterData.header}</h1>
+            {computerCenterContentDisplay}
+            {/* <Link to="/training-workshops" className={styles.Link}>
               LOCATE OUR CENTRES
-            </Link>
+            </Link> */}
           </Container>
         </div>
         <Container>
