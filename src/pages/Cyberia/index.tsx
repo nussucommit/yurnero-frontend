@@ -1,6 +1,9 @@
 import { useState, useEffect } from "react"
 import { Link } from 'react-router-dom'
 import styles from './Cyberia.module.css'
+import axios from 'axios'
+import { data } from "./temp"
+import { ContentItem, convertContentItems } from "../helper"
 
 type Content = {
   title: string;
@@ -8,16 +11,28 @@ type Content = {
 }
 
 const Cyberia = () => {
-  const [content, setContent] = useState<Content[]>([]);
+  const [content, setContent] = useState<ContentItem[]>(data);
 
   useEffect(() => {
-    fetch("")
-      .then(res => res.json())
-      .then(
-        (res) => {
-          setContent(res as Content[])
-        }
-      )
+    // axios.get("http://localhost:8000/cyberia", {
+    //   headers: {
+    //     // "Content": "Application/json",
+    //     "Access-Control-Allow-Origin": "*",
+    //     // "Access-Control-Allow-Headers": "*",
+    //     // "Access-Control-Allow-Methods": "GET,PUT,POST,DELETE,PATCH,OPTIONS"
+    //   }
+    // }).then(res => console.log(res))
+
+  //   fetch("http://localhost:8000/cyberia", {
+  //     mode: "no-cors"
+  //   })
+  //     // .then(res => res.json())
+  //     .then(
+  //       (res) => {
+  //         console.log(res)
+  //         // setContent(res as Content[])
+  //       }
+  //     )
   }, [])
 
   return (
@@ -34,14 +49,7 @@ const Cyberia = () => {
         <h1>Cyberia Camp 2021</h1>
       </div>
       <div className={styles.Content}>
-        {
-          content.map((item, idx) => (
-            <div key={idx}>
-              <p className={styles.ContentTitle}>{item.title}</p>
-              <p className={styles.ContentDescription}>{item.description}</p>
-            </div>
-          ))
-        }
+        {convertContentItems(content)}
       </div>
     </div>
   )

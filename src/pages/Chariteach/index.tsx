@@ -1,21 +1,17 @@
+import { ContentItem, convertContentItems } from "pages/helper";
 import { useState, useEffect } from "react"
 import { Link } from 'react-router-dom'
 import styles from './Chariteach.module.css'
 
-type Content = {
-  title: string;
-  description: string;
-}
-
 const Chariteach = () => {
-  const [content, setContent] = useState<Content[]>([]);
+  const [content, setContent] = useState<ContentItem[]>([]);
 
   useEffect(() => {
     fetch("")
       .then(res => res.json())
       .then(
         (res) => {
-          setContent(res as Content[])
+          setContent(res as ContentItem[])
         }
       )
   }, [])
@@ -34,14 +30,7 @@ const Chariteach = () => {
         <h1>charITeach 2021</h1>
       </div>
       <div className={styles.Content}>
-        {
-          content.map((item, idx) => (
-            <div key={idx}>
-              <p className={styles.ContentTitle}>{item.title}</p>
-              <p className={styles.ContentDescription}>{item.description}</p>
-            </div>
-          ))
-        }
+        {convertContentItems(content)}
       </div>
     </div>
   )
