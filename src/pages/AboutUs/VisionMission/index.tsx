@@ -2,8 +2,21 @@ import { setDefaultResultOrder } from 'dns'
 import 'bootstrap/dist/css/bootstrap.css'
 import styles from './VisionMission.module.css'
 import { Link } from 'react-router-dom'
+import { ContentItem, renderMissionContentFromApi } from './helper'
+import { useEffect, useState } from 'react'
+import { response } from './response'
+
+const URL = 'http://localhost:8000/aboutus/vission-and-mission'
 
 const VisionMission = () => {
+  const [content, setContent] = useState<ContentItem[]>(response)
+  useEffect(() => {
+    const fetchData = async () => {
+      const result = await fetch(URL).then(resp => resp.json())
+      setContent(result as ContentItem[])
+    }
+    fetchData()
+  }, [])
   return (
     <div className={styles.VisionMission}>
       <div className={styles.TitleBar}>
@@ -30,10 +43,7 @@ const VisionMission = () => {
             <div className={styles.Underline + ' mx-auto'}></div>
             <ul>
               <li>
-                <span>
-                  To prepare the NUS community for the future by equipping them with the necessary{' '}
-                  <strong>IT skills</strong>.
-                </span>
+                <span>To prepare the NUS community for the future by equipping them with the necessary IT skills.</span>
               </li>
             </ul>
           </div>
@@ -42,7 +52,8 @@ const VisionMission = () => {
           <div className={styles.MissionContent + ' col-md-7'}>
             <h2>Our Mission</h2>
             <div className={styles.Underline + ' mx-auto'}></div>
-            <ul>
+            {renderMissionContentFromApi(content)}
+            {/* <ul>
               <li>
                 <span>
                   Provide top quality <strong>IT services</strong> that supports the functioning of the members of the
@@ -60,7 +71,7 @@ const VisionMission = () => {
                   <strong> IT field</strong> in the NUS community.
                 </span>
               </li>
-            </ul>
+            </ul> */}
           </div>
           <div className={styles.MissionImage + ' col-md-5'}>
             <img
