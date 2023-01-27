@@ -1,0 +1,31 @@
+
+.Nav {
+    margin: 30px 0px
+}
+
+.Input {
+    margin: 20px 0px
+}
+
+.NavTitle {
+    display: flex;
+}
+
+.NavButtonTitle {
+    font-size: large;
+    justify-content: start;
+    font-weight: bold;
+}
+
+.NavButtonDropdownIcon {
+    justify-content: end;
+}
+
+.NavButtonTitle:hover {
+    color: #fac548;
+}
+
+.SubNavButtonTitle {
+    font-size: large;
+    margin: 15px 20px;
+}

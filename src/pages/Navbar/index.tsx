@@ -1,8 +1,15 @@
-import styles from "./Navbar.module.css"
+import NavbuttonWithSubnav from "./NavbuttonWIthSubnav"
+import { navs } from "constants/navs"
 
 const Navbar = () => {
     return(
-        <p>Navbar</p>
+        <div>
+        {
+            navs.map((navButtonInfo, idx) => (
+                <NavbuttonWithSubnav key={idx} title={navButtonInfo.title} path={navButtonInfo.path} subNav={navButtonInfo.subNav}/>
+            ))
+        }
+        </div>
     )
 }
 
