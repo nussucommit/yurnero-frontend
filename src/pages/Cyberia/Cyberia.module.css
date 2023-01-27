@@ -1,12 +1,11 @@
 .Cyberia{
-    font-size: 1.3rem;
+    font-size: 1.2rem;
     color: #484848;
 }
 
 .TitleBar{
     background-color: #002A56;
     color: white;
-    /* padding: 24px 86px; */
     padding: 24px 6%;
 
 }
@@ -40,10 +39,6 @@
 .ContentTitle {
     color: #002A56;
     font-weight: bold;
-}
-
-.ContentDescription {
-
 }
 
 img{

@@ -8,12 +8,14 @@ export type ContentItem = {
     result?: any
 }
 
-export const convertContentItems = (contentItems: ContentItem[]) => {
+export const convertContentItems = (contentItems: string | ContentItem[]) => {
+    if (typeof(contentItems) === "string") return <p>{contentItems}</p>
+
     return (
         contentItems.map((item, idx) => 
         <React.Fragment key={idx}>
             {item.type === "heading" ? 
-                <h1 style={{fontWeight: "500", fontSize: "36px", paddingBottom: "30px", paddingTop: "30px"}}>{item.content}</h1>
+                <h1 style={{fontWeight: "bold", fontSize: "40px", paddingBottom: "30px", paddingTop: "30px"}}><>{item.content}</></h1>
             :
             item.type === "paragraph" ? 
                 <p>
@@ -23,11 +25,11 @@ export const convertContentItems = (contentItems: ContentItem[]) => {
             item.type === "text"?
                 (item.attribute?.link?
                     <a href={item.attribute.link} style={{color: "#0000EE", padding: "0" }}>
-                        {item.content}
+                        <>{item.content}</>
                     </a>
                     :
-                    <span style={{fontWeight: item.attribute.bold ? "bold" : "", color: item.attribute.color}}>
-                        {item.content}
+                    <span style={{fontWeight: item.attribute.bold ? "bold" : "normal", color: item.attribute.color}}>
+                        <>{item.content}</>
                     </span>
                 )
             :
@@ -39,12 +41,12 @@ export const convertContentItems = (contentItems: ContentItem[]) => {
                             <>
                                 {
                                 c.attribute?.link?
-                                    <a href={c.attribute.link} style={{color: "#0000EE", padding: "0" }}>
-                                        {c.content}
+                                    <a key={id} href={c.attribute.link} style={{color: "#0000EE", padding: "0" }}>
+                                        <>{c.content}</>
                                     </a>
                                 :
-                                    <span key={id} style={{fontWeight: c.attribute.bold ? "bold" : "", color: c.attribute.color}}>
-                                        {c.content}
+                                    <span key={id} style={{fontWeight: c.attribute.bold ? "bold" : "normal", color: c.attribute.color}}>
+                                        <>{c.content}</>
                                     </span>
                                 }
                                 {c.children !== undefined ? <div style={{ paddingLeft: "50px"}}>{convertContentItems(c.children as unknown as ContentItem[])}</div>: <></>}

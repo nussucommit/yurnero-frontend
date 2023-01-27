@@ -1,5 +1,6 @@
 export enum Routes {
   // Define your routes here
+  backendRoot = "http://localhost:8000",
   index = '/',
   aboutUs = '/about-us',
   ourFamily = '/about-us/our-family',
