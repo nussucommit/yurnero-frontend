@@ -10,11 +10,11 @@ export type ContentItem = {
 }
 
 export const renderMissionContentFromApi = (content: ContentItem[]) => {
-  return content.map(data => {
+  return content.map((data, idx) => {
     if (data.type === 'paragraph') {
-      return <ul>{renderMissionContentFromApi(data.content as ContentItem[])}</ul>
+      return <ul key={idx}>{renderMissionContentFromApi(data.content as ContentItem[])}</ul>
     } else if (data.type === 'text') {
-      return <li>{data.content as string}</li>
+      return <li key={idx}>{data.content as string}</li>
     }
   })
 }

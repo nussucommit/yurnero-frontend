@@ -1,4 +1,3 @@
-import { setDefaultResultOrder } from 'dns'
 import 'bootstrap/dist/css/bootstrap.css'
 import styles from './VisionMission.module.css'
 import { Link } from 'react-router-dom'
@@ -6,7 +5,7 @@ import { ContentItem, renderMissionContentFromApi } from './helper'
 import { useEffect, useState } from 'react'
 import { response } from './response'
 
-const URL = 'http://localhost:8000/aboutus/vission-and-mission'
+const URL = 'http://localhost:8000/aboutus/vision-and-mission/'
 
 const VisionMission = () => {
   const [content, setContent] = useState<ContentItem[]>(response)
