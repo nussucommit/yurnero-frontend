@@ -13,7 +13,7 @@ type ContentItem = {
   result?: any
 }
 
-const URL = 'http://localhost:8000/creation'
+const URL = 'http://localhost:3000/creation'
 
 const Creation = () => {
   const [content, setContent] = useState<ContentItem[]>(response)
