@@ -12,6 +12,14 @@ export type ContentItem = {
 export const renderContentFromApi = (content: ContentItem[]) => {
   return content.map(data => {
     if (data.type === 'heading') {
+      if (data.content === 'Overview') {
+        return (
+          <div>
+            <h2 style={{ marginTop: 0 }}>{data.content}</h2>
+            <div className={styles.Underline}></div>
+          </div>
+        )
+      }
       return (
         <div>
           <h2>{data.content}</h2>
@@ -37,7 +45,7 @@ export const renderContentFromApi = (content: ContentItem[]) => {
         </ul>
       )
     } else if (data.type === 'image') {
-      return <img src={data.content as string} />
+      return <img src={data.content as string} alt="Creation Timeline" />
     }
   })
 }
