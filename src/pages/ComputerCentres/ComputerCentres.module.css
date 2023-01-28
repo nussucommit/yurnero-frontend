@@ -16,15 +16,20 @@
 
 .Content p {
   color: #f0f4f6;
+  font-family: inherit;
   font-size: 3.375rem;
   line-height: 3.75rem;
   letter-spacing: 2px;
   padding-bottom: 0px;
+  padding-left: 10%;
 }
 
 .Content p.info {
+  font-family: Lato, sans-serif;
   font-size: 1rem;
+  letter-spacing: 2px;
   color: rgba(255, 255, 255, 0.7) !important;
+  padding-left: 10%;
 }
 
 .Colordiff {
@@ -35,33 +40,44 @@
   display: flex;
   flex-direction: column;
   align-items: left;
-  padding: 0 7%;
-}
-
-.operatingHours {
-  align-items: left;
-  padding: 0 7%;
-}
-
-h2 {
-  color: blue;
-  font-size: 20px;
-}
-
-.gridContainer {
-  display: grid;
-  grid-template-columns: auto auto auto;
-}
-
-.gridItem {
-  border-bottom: solid;
-}
-
-.printingRates {
-  padding: 0 7%;
+  padding: 5% 25% 0% 25%
 }
 
 p {
   font-family: 'Lato', sans-serif;
   font-size: 1.25rem;
+  padding-bottom: 5%
 }
+
+.operatingHours {
+  align-items: left;
+  font-size: 3rem;
+  padding: 0% 25% 0% 25%
+}
+
+h2 {
+  font-size: 3rem;
+  color: #002A56;
+  font-family: "Lato", sans-serif;
+}
+
+.gridContainer {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  padding: 0% 25% 4% 25%;
+
+}
+
+.gridItem {
+  border-bottom: solid;
+  padding: 3% 3% 3% 3%;
+
+
+}
+
+.printingRates {
+    align-items: left;
+    font-size: 3rem;
+    padding: 0% 25% 0% 25%
+}
+
