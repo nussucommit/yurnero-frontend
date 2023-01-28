@@ -26,7 +26,6 @@ const NavbuttonWithSubnav = ({title, path, subNav}: NavbuttonWithSubnavProps) =>
     return (
         <Menu isOpen={isOpen}>
             <MenuButton
-                variant="ghost"
                 mx={2}
                 my={5}
                 py={[1, 1, 2]}
