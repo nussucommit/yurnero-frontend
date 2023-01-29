@@ -9,7 +9,7 @@ import React from 'react'
 import { relative } from 'path'
 import { Box } from '@chakra-ui/react'
 
-const BACKEND_API_HOME_ROUTE = "http://localhost:3000/computer-centres"; // why this have a ;
+const BACKEND_API_HOME_ROUTE = "http://localhost:8000/computer-centres"; // why this have a ;
 const COMMIT_HOST_URL = "https://www.nussucommit.com/computer-centres/"
 const COMPUTER_CENTRES_ROUTE = "home/computer-centres/"
 
