@@ -17,7 +17,13 @@ const TeamCard = props => {
                 <div>
                   <Image src={img} alt="Home" className={styles.Picture} boxSize="400px" objectFit={'cover'} />
                   <div>
-                    <p className={styles.CardContent}>{content}</p>
+                    {content.map(({ key, content }) => {
+                      return (
+                        <p key={key} className={styles.CardContent}>
+                          {content}
+                        </p>
+                      )
+                    })}
                   </div>
                 </div>
               </div>

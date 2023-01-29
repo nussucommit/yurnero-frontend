@@ -1,11 +1,11 @@
-import { Heading, Image } from '@chakra-ui/react'
 import { Link } from 'react-router-dom'
 import 'bootstrap/dist/css/bootstrap.min.css'
 import styles from './OurStructure.module.css'
 import TeamCard from './TeamCard'
-import { teams } from './teams'
+import { useOurStructure } from './useOurStructure'
 
 const OurStructure = () => {
+  const { overview, teams } = useOurStructure()
   return (
     <div className={styles.OurStructure}>
       <div className={styles.TitleBar}>
@@ -20,8 +20,16 @@ const OurStructure = () => {
       </div>
       <div className={styles.Content}>
         <div className={styles.SubSection}>
-          <h2>SIGN UP HAS ALREADY CLOSED!</h2>
-          <p>Thank you for your interest. See you next year!</p>
+          {overview.map((component: any, index) => {
+            if (component.type === 'paragraph') {
+              const content = component.content.at(0)?.content
+              return <p key={index}>{content}</p>
+            } else if (component.type === 'heading') {
+              return <h2 key={index}>{component.content}</h2>
+            } else {
+              return null
+            }
+          })}
         </div>
         <div className={styles.SubSection}>
           <h2>Our Teams</h2>
@@ -31,6 +39,7 @@ const OurStructure = () => {
           </p>
           <div className={styles.SubSection}>
             {teams.map(team => {
+              // @ts-ignore
               return <TeamCard {...team} />
             })}
           </div>
