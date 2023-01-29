@@ -1,0 +1,46 @@
+.Cyberia{
+    font-size: 1.2rem;
+    color: #484848;
+}
+
+.TitleBar{
+    background-color: #002A56;
+    color: white;
+    padding: 24px 6%;
+
+}
+
+.TitleBar h1{
+    font-weight: 600;
+    font-size: 54px;
+}
+
+.NavLinks{
+    display: flex;
+    text-align: left;
+    font-size: 0.75em;
+    padding-top: 12px;
+    padding-bottom: 20px;
+}
+
+.NavLinks p{
+    padding-right: 15px;
+}
+
+.Content{
+    padding: 64px 20%;
+    line-height: 1.8em;
+}
+
+.Content p{
+    margin-bottom: 24px;
+}
+
+.ContentTitle {
+    color: #002A56;
+    font-weight: bold;
+}
+
+img{
+    margin-bottom: 24px;
+}
