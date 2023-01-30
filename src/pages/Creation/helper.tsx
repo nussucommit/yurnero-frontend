@@ -22,7 +22,7 @@ export const renderContentFromApi = (content: ContentItem[]) => {
       }
       return (
         <div key={idx}>
-          <h2>{data.content}</h2>
+          <h2>{data.content as string}</h2>
           <div className={styles.Underline}></div>
         </div>
       )

@@ -1,9 +1,9 @@
 import { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
 import styles from './Creation.module.css'
-import { TimeLine } from './TimeLine'
 import { response } from './response'
 import { renderContentFromApi } from './helper'
+import { Routes } from 'constants/routes'
 
 type ContentItem = {
   type?: string
@@ -13,17 +13,18 @@ type ContentItem = {
   result?: any
 }
 
-const URL = 'http://localhost:3000/creation'
+const URL = Routes.backendRoot + Routes.creation
 
 const Creation = () => {
-  const [content, setContent] = useState<ContentItem[]>(response)
-  useEffect(() => {
-    const fetchData = async () => {
-      const result = await fetch(URL).then(resp => resp.json())
-      setContent(result as ContentItem[])
-    }
-    fetchData()
-  }, [])
+  // const [content, setContent] = useState<ContentItem[]>(response)
+  // useEffect(() => {
+  //   const fetchData = async () => {
+  //     const result = await fetch(URL).then(resp => resp.json())
+  //     setContent(result as ContentItem[])
+  //   }
+  //   fetchData()
+  // }, [])
+  const [isLoading, content] = use
   return (
     <div className={styles.Creation}>
       <div className={styles.TitleBar}>
