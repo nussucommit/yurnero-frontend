@@ -1,3 +1,9 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 .VisionMission {
   font-size: 1.3rem;
   color: #484848;
@@ -58,7 +64,10 @@
   list-style-image: url('./binoculars.png');
   color: #484848;
   text-align: justify;
-  margin-bottom: 80px;
+}
+
+.VisionContent ul {
+  margin: 0;
 }
 
 .Telescope {

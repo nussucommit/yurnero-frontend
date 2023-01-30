@@ -4,18 +4,23 @@ import { Link } from 'react-router-dom'
 import { ContentItem, renderMissionContentFromApi } from './helper'
 import { useEffect, useState } from 'react'
 import { response } from './response'
+import { Routes } from 'constants/routes'
+import { useFetchData } from 'common/hooks/useFetchData'
+import { CircularProgress } from '@chakra-ui/progress'
+import { convertContentItems } from 'common/ContentItem'
 
-const URL = 'http://localhost:8000/aboutus/vision-and-mission/'
+const URL = Routes.backendRoot + Routes.visionMission
 
 const VisionMission = () => {
-  const [content, setContent] = useState<ContentItem[]>(response)
-  useEffect(() => {
-    const fetchData = async () => {
-      const result = await fetch(URL).then(resp => resp.json())
-      setContent(result as ContentItem[])
-    }
-    fetchData()
-  }, [])
+  // const [content, setContent] = useState<ContentItem[]>(response)
+  // useEffect(() => {
+  //   const fetchData = async () => {
+  //     const result = await fetch(URL).then(resp => resp.json())
+  //     setContent(result as ContentItem[])
+  //   }
+  //   fetchData()
+  // }, [])
+  const [isLoading, content] = useFetchData(URL)
   return (
     <div className={styles.VisionMission}>
       <div className={styles.TitleBar}>
@@ -51,7 +56,15 @@ const VisionMission = () => {
           <div className={styles.MissionContent + ' col-md-7'}>
             <h2>Our Mission</h2>
             <div className={styles.Underline + ' mx-auto'}></div>
-            {renderMissionContentFromApi(content)}
+            {isLoading ? (
+              <CircularProgress
+                isIndeterminate
+                color="blue.300"
+                style={{ display: 'flex', justifyContent: 'center' }}
+              />
+            ) : (
+              renderMissionContentFromApi(content as ContentItem[])
+            )}
             {/* <ul>
               <li>
                 <span>
