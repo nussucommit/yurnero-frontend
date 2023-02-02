@@ -1,54 +1,154 @@
-.VisionMission{
-    font-size: 1.3rem;
-    color: #484848;
+.VisionMission {
+  font-size: 1.3rem;
+  color: #484848;
 }
 
-.TitleBar{
-    background-color: #002A56;
-    color: white;
-    /* padding: 24px 86px; */
-    padding: 24px 6%;
-
+.TitleBar {
+  background-color: #002a56;
+  color: white;
+  /* padding: 24px 86px; */
+  padding: 24px 6%;
 }
 
-.TitleBar h1{
-    font-weight: 600;
-    font-size: 54px;
+.TitleBar h1 {
+  font-weight: 600;
+  font-size: 54px;
 }
 
-.NavLinks{
-    display: flex;
-    text-align: left;
-    font-size: 0.75em;
-    padding-top: 12px;
-    padding-bottom: 20px;
+.NavLinks {
+  display: flex;
+  text-align: left;
+  font-size: 0.75em;
+  padding-top: 12px;
+  padding-bottom: 20px;
 }
 
-.NavLinks p{
-    padding-right: 15px;
+.NavLinks p {
+  padding-right: 15px;
 }
 
-.Content{
-    padding: 64px 20%;
-    line-height: 1.8em;
+.Underline {
+  height: 4px;
+  width: 8rem;
+  margin-bottom: 10px;
+  background-color: #0a0a0a;
+  opacity: 0.5;
 }
 
-.Content h2{
-    color:#002A56;
-    font-size: 44px;
-    margin: 30px 0;
+.Content {
+  padding: 64px 20%;
+  line-height: 1.8em;
 }
 
-.Content p{
-    margin-bottom: 80px;
+.Content div h2 {
+  color: #002a56;
+  font-size: 40px;
+  margin: 30px 0;
+  margin-bottom: 15px;
+  text-align: center;
+  font-weight: 700;
+  opacity: 0.95;
 }
 
-.Mission li{
-    list-style-type: disc;
-    margin-bottom: 20px;
-    font-size: 1.3rem;
-    color: #484848;
-    margin: 3%;
+.Content div p {
+  text-align: justify;
 }
 
-    
+.VisionContent ul li {
+  list-style-image: url('./binoculars.png');
+  color: #484848;
+  text-align: justify;
+  margin-bottom: 80px;
+}
+
+.Telescope {
+  display: block;
+  margin-left: 10%;
+  margin-right: 60%;
+  width: 60%;
+  height: 80%;
+  color: #002a56;
+  transition: all 0.3s ease-in-out;
+  opacity: 0.7;
+}
+
+.Telescope:hover {
+  transform: scale(1.2);
+  opacity: 1;
+}
+
+.MissionContent ul {
+  margin: 5px 0;
+}
+
+.MissionContent ul li {
+  text-align: justify;
+  list-style-image: url('./scroll.png');
+  color: #484848;
+}
+
+.MissionImage {
+  margin-top: 10%;
+}
+
+.Scroll {
+  margin: auto;
+  margin-top: 20%;
+  width: 50%;
+  height: 60%;
+  color: #002a56;
+  transition: all 0.5s ease-in-out;
+  opacity: 0.7;
+}
+
+.Scroll:hover {
+  transform: rotate(360deg);
+  opacity: 1;
+}
+
+strong {
+  color: #0a0a0a !important;
+}
+
+span {
+  margin-left: 0.5%;
+}
+
+@media screen and (max-width: 768px) {
+  .VisionImage,
+  .MissionImage {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .VisionMission {
+    font-size: 1rem;
+  }
+
+  li {
+    font-size: 1rem;
+  }
+
+  .VisionImage {
+    margin-top: 30px;
+  }
+
+  .Telescope {
+    width: 70%;
+    height: 65%;
+  }
+
+  .MissionImage {
+    margin-top: 60px;
+  }
+
+  .Scroll {
+    width: 75%;
+    height: 55%;
+  }
+
+  .Content {
+    line-height: 1.3rem;
+  }
+}
