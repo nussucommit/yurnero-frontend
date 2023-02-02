@@ -1,25 +1,15 @@
 import 'bootstrap/dist/css/bootstrap.css'
 import styles from './VisionMission.module.css'
 import { Link } from 'react-router-dom'
-import { ContentItem, renderMissionContentFromApi } from './helper'
-import { useEffect, useState } from 'react'
-import { response } from './response'
+import { renderMissionContentFromApi } from './helper'
 import { Routes } from 'constants/routes'
 import { useFetchData } from 'common/hooks/useFetchData'
 import { CircularProgress } from '@chakra-ui/progress'
-import { convertContentItems } from 'common/ContentItem'
+import { ContentItem } from 'common/ContentItem'
 
 const URL = Routes.backendRoot + Routes.visionMission
 
 const VisionMission = () => {
-  // const [content, setContent] = useState<ContentItem[]>(response)
-  // useEffect(() => {
-  //   const fetchData = async () => {
-  //     const result = await fetch(URL).then(resp => resp.json())
-  //     setContent(result as ContentItem[])
-  //   }
-  //   fetchData()
-  // }, [])
   const [isLoading, content] = useFetchData(URL)
   return (
     <div className={styles.VisionMission}>
@@ -65,25 +55,6 @@ const VisionMission = () => {
             ) : (
               renderMissionContentFromApi(content as ContentItem[])
             )}
-            {/* <ul>
-              <li>
-                <span>
-                  Provide top quality <strong>IT services</strong> that supports the functioning of the members of the
-                  NUS community.
-                </span>
-              </li>
-              <li>
-                <span>
-                  Provide the NUS community with opportunities to pick up relevant <strong>IT skills</strong>.
-                </span>
-              </li>
-              <li>
-                <span>
-                  Adapt to an ever-changing world and spearhead innovation in the
-                  <strong> IT field</strong> in the NUS community.
-                </span>
-              </li>
-            </ul> */}
           </div>
           <div className={styles.MissionImage + ' col-md-5'}>
             <img
