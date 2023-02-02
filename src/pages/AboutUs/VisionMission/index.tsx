@@ -1,9 +1,16 @@
-import { setDefaultResultOrder } from 'dns'
 import 'bootstrap/dist/css/bootstrap.css'
 import styles from './VisionMission.module.css'
 import { Link } from 'react-router-dom'
+import { renderMissionContentFromApi } from './helper'
+import { Routes } from 'constants/routes'
+import { useFetchData } from 'common/hooks/useFetchData'
+import { CircularProgress } from '@chakra-ui/progress'
+import { ContentItem, convertContentItems } from 'common/ContentItem'
+
+const URL = Routes.backendRoot + Routes.visionMission
 
 const VisionMission = () => {
+  const [isLoading, content] = useFetchData(URL)
   return (
     <div className={styles.VisionMission}>
       <div className={styles.TitleBar}>
@@ -30,10 +37,7 @@ const VisionMission = () => {
             <div className={styles.Underline + ' mx-auto'}></div>
             <ul>
               <li>
-                <span>
-                  To prepare the NUS community for the future by equipping them with the necessary{' '}
-                  <strong>IT skills</strong>.
-                </span>
+                <span>To prepare the NUS community for the future by equipping them with the necessary IT skills.</span>
               </li>
             </ul>
           </div>
@@ -42,25 +46,15 @@ const VisionMission = () => {
           <div className={styles.MissionContent + ' col-md-7'}>
             <h2>Our Mission</h2>
             <div className={styles.Underline + ' mx-auto'}></div>
-            <ul>
-              <li>
-                <span>
-                  Provide top quality <strong>IT services</strong> that supports the functioning of the members of the
-                  NUS community.
-                </span>
-              </li>
-              <li>
-                <span>
-                  Provide the NUS community with opportunities to pick up relevant <strong>IT skills</strong>.
-                </span>
-              </li>
-              <li>
-                <span>
-                  Adapt to an ever-changing world and spearhead innovation in the
-                  <strong> IT field</strong> in the NUS community.
-                </span>
-              </li>
-            </ul>
+            {isLoading ? (
+              <CircularProgress
+                isIndeterminate
+                color="blue.300"
+                style={{ display: 'flex', justifyContent: 'center' }}
+              />
+            ) : (
+              renderMissionContentFromApi(content as ContentItem[])
+            )}
           </div>
           <div className={styles.MissionImage + ' col-md-5'}>
             <img
