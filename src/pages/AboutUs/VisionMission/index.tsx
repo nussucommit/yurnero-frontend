@@ -5,7 +5,7 @@ import { renderMissionContentFromApi } from './helper'
 import { Routes } from 'constants/routes'
 import { useFetchData } from 'common/hooks/useFetchData'
 import { CircularProgress } from '@chakra-ui/progress'
-import { ContentItem } from 'common/ContentItem'
+import { ContentItem, convertContentItems } from 'common/ContentItem'
 
 const URL = Routes.backendRoot + Routes.visionMission
 

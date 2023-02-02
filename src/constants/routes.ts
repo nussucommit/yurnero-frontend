@@ -1,12 +1,12 @@
 export enum Routes {
   // Define your routes here
-  backendRoot = 'http://127.0.0.1:3000',
+  backendRoot = 'http://localhost:8000',
   index = '/',
-  aboutUs = '/about-us',
-  ourFamily = '/about-us/our-family',
-  visionMission = '/about-us/vision-mission',
-  ourStructure = '/about-us/our-structure',
-  managementCommittee = '/about-us/management-committee',
+  aboutUs = '/aboutus',
+  ourFamily = '/aboutus/our-family',
+  visionMission = '/aboutus/vision-and-mission',
+  ourStructure = '/aboutus/our-structure',
+  managementCommittee = '/aboutus/management-committee',
   computerCentres = '/computer-centres',
   externalWorkshops = '/external-workshops',
   sdp = '/sdp',
