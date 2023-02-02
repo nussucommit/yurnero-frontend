@@ -30,7 +30,7 @@ const AboutUsPage = () => {
           Today, apart from providing IT services at our two centres at YIH and AS8, we provide plenty of software
           training workshops and specialised training events catered to the NUS community. Our aim is to provide the NUS
           community with any technology necessary for them to ace their studies and to equip them with the IT skills
-          necessary to excel and differentiate themselves in their future careers.
+          necessary to excel and differentiate themselves in their future careers
         </p>
       </Container>
     </div>
