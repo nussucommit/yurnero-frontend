@@ -1,0 +1,28 @@
+.Feedback{
+    font-size: 1.2rem;
+    color: #484848;
+}
+
+.TitleBar{
+    background-color: #002A56;
+    color: white;
+    padding: 24px 6%;
+
+}
+
+.TitleBar h1{
+    font-weight: 600;
+    font-size: 54px;
+}
+
+.NavLinks{
+    display: flex;
+    text-align: left;
+    font-size: 0.75em;
+    padding-top: 12px;
+    padding-bottom: 20px;
+}
+
+.NavLinks p{
+    padding-right: 15px;
+}
