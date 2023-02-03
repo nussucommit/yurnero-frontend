@@ -115,11 +115,11 @@
   opacity: 1;
 }
 
-strong {
+.strong {
   color: #0a0a0a !important;
 }
 
-span {
+.span {
   margin-left: 0.5%;
 }
 
@@ -135,7 +135,7 @@ span {
     font-size: 1rem;
   }
 
-  li {
+  .li {
     font-size: 1rem;
   }
 

@@ -11,7 +11,7 @@ export enum Routes {
   externalWorkshops = '/external-workshops',
   sdp = '/sdp',
   pdpa = '/pdpa',
-  creation = '/creation',
+  creation = '/events/creation',
   chariteach = '/events/chariteach',
   cyberia = '/events/cyberia',
   events = '/events',

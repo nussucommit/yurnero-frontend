@@ -4,20 +4,22 @@ import { Routes } from 'constants/routes'
 import { useFetchData } from 'common/hooks/useFetchData'
 import { ContentItem, convertContentItems } from 'common/ContentItem'
 import { CircularProgress } from '@chakra-ui/progress'
+import Header from 'pages/Header'
 
-const URL = Routes.backendRoot + Routes.creation
+const URL = Routes.backendRoot + '/creation'
 
 const Creation = () => {
   const [isLoading, content] = useFetchData(URL)
   return (
     <div className={styles.Creation}>
+      <Header />
       <div className={styles.TitleBar}>
         <div className={styles.NavLinks}>
           <Link to="/">HOME</Link>
           <p>/</p>
           <Link to="/events">EVENTS</Link>
           <p>/</p>
-          <Link to="/events/CREATION">CREATION</Link>
+          <Link to="/events/creation">CREATION</Link>
         </div>
         <h1>CREATION</h1>
       </div>

@@ -1,3 +1,4 @@
+import { CSSProperties } from "@emotion/serialize"
 import * as React from "react"
 
 export type ContentItem = {
@@ -8,6 +9,13 @@ export type ContentItem = {
     result?: any
 }
 
+const getInputtedStyle: ((item: ContentItem) => any) = (item: ContentItem) => {
+    return ({
+        fontWeight: item.attribute?.bold ? "bold" : "normal",
+        color: item.attribute?.color,
+        textDecoration: item.attribute?.underline ? "underline" : ""
+    })
+}
 
 export const convertContentItems = (contentItems: string | ContentItem[]) => {
     var start = 0
@@ -31,37 +39,37 @@ export const convertContentItems = (contentItems: string | ContentItem[]) => {
                         <>{item.content}</>
                     </a>
                     :
-                    <span style={{fontWeight: item.attribute.bold ? "bold" : "normal", color: item.attribute.color}}>
+                    <span style={getInputtedStyle(item)}>
                         <>{item.content}</>
                     </span>
                 )
             :
             item.type === "bulleted_list_item" ?
-            <ul>
-                <li style={{ fontSize: "18px", color: "black", padding: "0", listStyleType: "disc"}}>
-                    {(item.content as ContentItem[]).map((c, id) => {
-                        return (
-                        <>
-                            {
-                            c.attribute?.link?
-                                <a key={id} href={c.attribute.link} style={{color: "#4372D6", padding: "0" }}>
-                                    <>{c.content}</>
-                                </a>
-                            :
-                                <span key={id} style={{fontWeight: c.attribute.bold ? "bold" : "normal", color: c.attribute.color}}>
-                                    <>{c.content}</>
-                                </span>
-                            }
-                            {c.children !== undefined ? <div style={{ paddingLeft: "50px"}}>{convertContentItems(c.children as unknown as ContentItem[])}</div>: <></>}
-                        
-                        </>
-                    )})}
-                </li>
-            </ul>
+                <ul>
+                    <li style={{ fontSize: "18px", color: "black", padding: "0", listStyleType: "disc"}}>
+                        {(item.content as ContentItem[]).map((c, id) => {
+                            return (
+                            <>
+                                {
+                                c.attribute?.link?
+                                    <a key={id} href={c.attribute.link} style={{color: "#4372D6", padding: "0" }}>
+                                        <>{c.content}</>
+                                    </a>
+                                :
+                                    <span key={id} style={getInputtedStyle(item)}>
+                                        <>{c.content}</>
+                                    </span>
+                                }
+                                {c.children !== undefined ? <div style={{ paddingLeft: "50px"}}>{convertContentItems(c.children as unknown as ContentItem[])}</div>: <></>}
+                            
+                            </>
+                        )})}
+                    </li>
+                </ul>
             :
             item.type === "image" ?
                 <li>
-                    <img src={item.content as string}/>
+                    <img src={item.content as string} style={{marginBottom: "24px"}}/>
                 </li>
             :
                 <></>
