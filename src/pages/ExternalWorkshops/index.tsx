@@ -1,28 +1,17 @@
-import { useState, useEffect } from "react"
+import { CircularProgress } from "@chakra-ui/progress";
+import { ContentItem, convertContentItems } from "common/ContentItem";
+import { useFetchData } from "common/hooks/useFetchData";
+import { Routes } from "constants/routes";
+import Header from "pages/Header";
 import { Link } from 'react-router-dom'
 import styles from './ExternalWorkshops.module.css'
 
-type Content = {
-  title: string;
-  description: string;
-}
-
 const ExternalWorkshops = () => {
-  const [content, setContent] = useState<Content[]>([]);
-
-  useEffect(() => {
-    fetch("")
-      .then(res => res.json())
-      .then(
-        (res) => {
-          setContent(res as Content[])
-        }
-      )
-  }, [])
+  const [isLoading, content] = useFetchData(Routes.backendRoot + "/external-workshops")
 
   return (
     <div className={styles.ExternalWorkshops}>
-      {/* add header here */}
+      <Header />
       <div className={styles.TitleBar}>
         <div className={styles.NavLinks}>
           <Link to="/">HOME</Link>
@@ -32,14 +21,11 @@ const ExternalWorkshops = () => {
         <h1>External Training Workshops</h1>
       </div>
       <div className={styles.Content}>
-        {
-          content.map((item, idx) => (
-            <div key={idx}>
-              <p className={styles.ContentTitle}>{item.title}</p>
-              <p className={styles.ContentDescription}>{item.description}</p>
-            </div>
-          ))
-        }
+          {isLoading ? 
+            <CircularProgress isIndeterminate color='blue.300' style={{display: "flex", justifyContent: "center"}}/> 
+            :
+            convertContentItems(content as ContentItem[])
+          }
       </div>
     </div>
   )

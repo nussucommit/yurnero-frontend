@@ -1,3 +1,4 @@
+import { CSSProperties } from "@emotion/serialize"
 import * as React from "react"
 
 export type ContentItem = {
@@ -6,6 +7,14 @@ export type ContentItem = {
     attribute?: any,
     children?: ContentItem[],
     result?: any
+}
+
+const getInputtedStyle: ((item: ContentItem) => any) = (item: ContentItem) => {
+    return ({
+        fontWeight: item.attribute?.bold ? "bold" : "normal",
+        color: item.attribute?.color,
+        textDecoration: item.attribute?.underline ? "underline" : ""
+    })
 }
 
 export const convertContentItems = (contentItems: string | ContentItem[]) => {
@@ -28,7 +37,7 @@ export const convertContentItems = (contentItems: string | ContentItem[]) => {
                         <>{item.content}</>
                     </a>
                     :
-                    <span style={{fontWeight: item.attribute.bold ? "bold" : "normal", color: item.attribute.color}}>
+                    <span style={getInputtedStyle(item)}>
                         <>{item.content}</>
                     </span>
                 )
@@ -45,7 +54,7 @@ export const convertContentItems = (contentItems: string | ContentItem[]) => {
                                         <>{c.content}</>
                                     </a>
                                 :
-                                    <span key={id} style={{fontWeight: c.attribute.bold ? "bold" : "normal", color: c.attribute.color}}>
+                                    <span key={id} style={getInputtedStyle(item)}>
                                         <>{c.content}</>
                                     </span>
                                 }
@@ -58,7 +67,7 @@ export const convertContentItems = (contentItems: string | ContentItem[]) => {
             :
             item.type === "image" ?
                 <li>
-                    <img src={item.content as string}/>
+                    <img src={item.content as string} style={{marginBottom: "24px"}}/>
                 </li>
             :
                 <></>
