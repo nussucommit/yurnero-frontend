@@ -9,6 +9,9 @@ import { Link } from 'react-router-dom'
 import Navbar from 'pages/Navbar'
 import Banner from 'pages/Banner'
 import Footer from 'pages/Footer'
+import Address from 'pages/Contact/Components/Address'
+import OperatingHours from './Components/OperatingHours'
+import ContactUs from './Components/ContactUs'
 
 const Contact = () => {
   return (
@@ -31,49 +34,27 @@ const Contact = () => {
       <div className={styles.Content}>
       <Grid templateColumns='repeat(2, 1fr)' gap={10}>
         <Box className={styles.Details} w='100%' bg='white'>
-        <h2>YIH Computer Centre</h2>
-          <p>Yusof Ishak House, #03-10</p>
-          <p>National University of Singapore</p>
-          <p> 31 Lower Kent Ridge Road</p>
-          <p> Singapore 119078</p>
+          <Address/>
           <Link to="/"><h4>FIND DIRECTIONS →</h4></Link>
         </Box>
         <Box className={styles.Details} w='100%' bg='white'>
-        <h2>Operating Hours</h2>
-          <p><b>Monday - Friday:</b> 08:30 - 19:00</p>
-          <p><b>Saturday:</b> 08:30 - 15:00</p>
-          <p>Closed on Sundays and public holidays</p>
-          <h3>Note: Our operating hours are shorter due to the university vacation</h3>
+          <OperatingHours/>
         </Box>
       </Grid>
 
       <Grid templateColumns='repeat(2, 1fr)' gap={10}>
         <Box className={styles.Details} w='100%' bg='white'>
-        <h2>AS8 Computer Centre</h2>
-          <p>Blk AS8, #02-01</p>
-          <p>National University of Singapore</p>
-          <p>10 Kent Ridge Crescent</p>
-          <p> Singapore 119260</p>
+          <Address/>
           <Link to="/"><h4>FIND DIRECTIONS →</h4></Link>
         </Box>
         <Box className={styles.Details} w='100%' bg='white'>
-        <h2>Operating Hours</h2>
-          <p><b>Monday - Friday:</b> 08:00 - 19:00</p>
-          <p><b>Saturday:</b> 08:00 - 17:00</p>
-          <p>Closed on Sundays and public holidays</p>
-          <h3>Note: Our operating hours are shorter due to the university vacation</h3>
+          <OperatingHours/>
         </Box>
       </Grid>
 
       <Grid templateColumns='repeat(2, 1fr)' gap={10}>
         <Box className={styles.Details} w='100%' bg='white'>
-        <h2>Contact Us</h2>
-        <p><b>General Enquiries</b></p>
-          <p>+65 6601 1345</p>
-          <a href='mailto:commit@nussu.org.sg'>commit@nussu.org.sg</a>
-          <h2></h2>
-          <p><b>Marketing & Sponsorship Enquiries</b></p>
-          <a href='mailto:marketing@nussucommit.com'>marketing@nussucommit.com</a>
+        <ContactUs/>
         </Box>
         <Box className={styles.Details} w='100%' bg='white'>
           <h2></h2>
