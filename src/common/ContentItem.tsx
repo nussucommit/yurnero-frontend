@@ -8,14 +8,17 @@ export type ContentItem = {
     result?: any
 }
 
+
 export const convertContentItems = (contentItems: string | ContentItem[]) => {
+    var start = 0
+
     if (typeof(contentItems) === "string") return <p>{contentItems}</p>
 
     return (
         contentItems.map((item, idx) => 
         <React.Fragment key={idx}>
             {item.type === "heading" ? 
-                <h1 style={{fontWeight: "bold", fontSize: "40px", paddingBottom: "30px", paddingTop: "30px"}}><>{item.content}</></h1>
+                <h1 style={{color: "#002A56", fontWeight: "bold", fontSize: "40px", paddingBottom: "30px", paddingTop: "30px"}}><>{item.content}</></h1>
             :
             item.type === "paragraph" ? 
                 <p>
@@ -24,7 +27,7 @@ export const convertContentItems = (contentItems: string | ContentItem[]) => {
             :
             item.type === "text"?
                 (item.attribute?.link?
-                    <a href={item.attribute.link} style={{color: "#0000EE", padding: "0" }}>
+                    <a href={item.attribute.link} style={{color: "#4372D6", padding: "0" }}>
                         <>{item.content}</>
                     </a>
                     :
@@ -34,27 +37,27 @@ export const convertContentItems = (contentItems: string | ContentItem[]) => {
                 )
             :
             item.type === "bulleted_list_item" ?
-                <ul>
-                    <li style={{ fontSize: "18px", color: "black", padding: "0", listStyleType: "disc"}}>
-                        {(item.content as ContentItem[]).map((c, id) => {
-                            return (
-                            <>
-                                {
-                                c.attribute?.link?
-                                    <a key={id} href={c.attribute.link} style={{color: "#0000EE", padding: "0" }}>
-                                        <>{c.content}</>
-                                    </a>
-                                :
-                                    <span key={id} style={{fontWeight: c.attribute.bold ? "bold" : "normal", color: c.attribute.color}}>
-                                        <>{c.content}</>
-                                    </span>
-                                }
-                                {c.children !== undefined ? <div style={{ paddingLeft: "50px"}}>{convertContentItems(c.children as unknown as ContentItem[])}</div>: <></>}
-                            
-                            </>
-                        )})}
-                    </li>
-                </ul>
+            <ul>
+                <li style={{ fontSize: "18px", color: "black", padding: "0", listStyleType: "disc"}}>
+                    {(item.content as ContentItem[]).map((c, id) => {
+                        return (
+                        <>
+                            {
+                            c.attribute?.link?
+                                <a key={id} href={c.attribute.link} style={{color: "#4372D6", padding: "0" }}>
+                                    <>{c.content}</>
+                                </a>
+                            :
+                                <span key={id} style={{fontWeight: c.attribute.bold ? "bold" : "normal", color: c.attribute.color}}>
+                                    <>{c.content}</>
+                                </span>
+                            }
+                            {c.children !== undefined ? <div style={{ paddingLeft: "50px"}}>{convertContentItems(c.children as unknown as ContentItem[])}</div>: <></>}
+                        
+                        </>
+                    )})}
+                </li>
+            </ul>
             :
             item.type === "image" ?
                 <li>
