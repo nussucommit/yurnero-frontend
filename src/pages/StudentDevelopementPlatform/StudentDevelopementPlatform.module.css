@@ -16,18 +16,6 @@
     font-size: 54px;
 }
 
-.NavLinks{
-    display: flex;
-    text-align: left;
-    font-size: 0.75em;
-    padding-top: 12px;
-    padding-bottom: 20px;
-}
-
-.NavLinks p{
-    padding-right: 15px;
-}
-
 .Content{
     padding: 64px 20%;
     line-height: 1.8em;
