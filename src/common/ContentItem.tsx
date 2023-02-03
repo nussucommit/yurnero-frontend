@@ -18,7 +18,6 @@ const getInputtedStyle: ((item: ContentItem) => any) = (item: ContentItem) => {
 }
 
 export const convertContentItems = (contentItems: string | ContentItem[]) => {
-    var start = 0
 
     if (typeof(contentItems) === "string") return <p>{contentItems}</p>
 
