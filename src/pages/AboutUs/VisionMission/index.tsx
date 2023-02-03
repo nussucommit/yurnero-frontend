@@ -36,8 +36,8 @@ const VisionMission = () => {
             <h2>Our Vision</h2>
             <div className={styles.Underline + ' mx-auto'}></div>
             <ul>
-              <li>
-                <span>To prepare the NUS community for the future by equipping them with the necessary IT skills.</span>
+              <li className={styles.li}>
+                <span className={styles.span}>To prepare the NUS community for the future by equipping them with the necessary IT skills.</span>
               </li>
             </ul>
           </div>
