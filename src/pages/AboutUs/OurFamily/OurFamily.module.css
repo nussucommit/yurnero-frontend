@@ -1,42 +1,230 @@
-.OurFamily{
-    font-size: 1.3rem;
-    color: #484848;
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
 
-.TitleBar{
-    background-color: #002A56;
-    color: white;
-    /* padding: 24px 86px; */
-    padding: 24px 6%;
-
+.OurFamily {
+  font-size: 1.3rem;
+  color: #484848;
 }
 
-.TitleBar h1{
-    font-weight: 600;
-    font-size: 54px;
+.TitleBar {
+  background-color: #002a56;
+  color: white;
+  /* padding: 24px 86px; */
+  padding: 24px 6%;
 }
 
-.NavLinks{
-    display: flex;
-    text-align: left;
-    font-size: 0.75em;
-    padding-top: 12px;
-    padding-bottom: 20px;
+.TitleBar h1 {
+  font-weight: 600;
+  font-size: 54px;
 }
 
-.NavLinks p{
-    padding-right: 15px;
+.NavLinks {
+  display: flex;
+  text-align: left;
+  font-size: 0.75em;
+  padding-top: 12px;
+  padding-bottom: 20px;
 }
 
-.Content{
-    padding: 64px 20%;
-    line-height: 1.8em;
+.NavLinks p {
+  padding-right: 15px;
 }
 
-.Content p{
-    margin-bottom: 24px;
+.Content {
+  padding: 58px 20%;
+  line-height: 1.8em;
 }
 
-img{
-    margin-bottom: 24px;
+.Content p {
+  margin-bottom: 24px;
+}
+
+.Paragraph {
+  margin-top: 5rem;
+  margin-bottom: 5rem;
+}
+
+.ChatBoxLeft {
+  width: 90%;
+  margin: 0 auto;
+  padding: 1.5rem;
+  text-align: center;
+  font-family: arial;
+  position: relative;
+  border: 5px solid #002a56;
+  background-color: rgba(157, 204, 255, 0.3);
+}
+
+.ChatBoxRight {
+  width: 90%;
+  margin: 0 auto;
+  padding: 1.5rem;
+  text-align: center;
+  font-family: arial;
+  position: relative;
+  border: 5px solid #ef7c00;
+  background-color: #faeddf;
+}
+
+.ChatBoxBottomLeftLeg:before {
+  content: '';
+  width: 0px;
+  height: 0px;
+  position: absolute;
+  border-left: 10px solid transparent;
+  border-right: 10px solid #002a56;
+  border-top: 10px solid #002a56;
+  border-bottom: 10px solid transparent;
+  left: -21px;
+  top: 6px;
+}
+
+.ChatBoxBottomLeftLeg:after {
+  content: '';
+  width: 0px;
+  height: 0px;
+  position: absolute;
+  border-left: 7px solid transparent;
+  border-right: 7px solid #e8f0f8;
+  border-top: 7px solid #e8f0f8;
+  border-bottom: 7px solid transparent;
+  left: -11px;
+  top: 10px;
+}
+
+.ChatBoxBottomRightLeg:before {
+  content: '';
+  width: 0px;
+  height: 0px;
+  position: absolute;
+  border-left: 10px solid #ef7c00;
+  border-right: 10px solid transparent;
+  border-top: 10px solid #ef7c00;
+  border-bottom: 10px solid transparent;
+  right: -20px;
+  top: 6px;
+}
+
+.ChatBoxBottomRightLeg:after {
+  content: '';
+  width: 0px;
+  height: 0px;
+  position: absolute;
+  border-left: 7px solid #faeddf;
+  border-right: 7px solid transparent;
+  border-top: 7px solid #faeddf;
+  border-bottom: 7px solid transparent;
+  right: -11px;
+  top: 10px;
+}
+
+.ImageBody {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  background-size: 140% !important;
+  background-repeat: no-repeat !important;
+  background-position: center !important;
+  margin-top: 5%;
+  margin-bottom: 5%;
+}
+
+@media (min-width: 992px) {
+  .ImageBody {
+    background-size: 148vh !important;
+    background-repeat: no-repeat !important;
+    background-position: 50% -31vh !important;
+  }
+}
+
+.Row {
+  margin-right: 0;
+  margin-left: 0;
+}
+
+.InnerBorder {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.OuterBorder {
+  border: 2px solid #de9b72;
+  height: 99%;
+  width: 98%;
+  padding: 6px;
+  margin: 0 auto;
+  background-color: #3a3d3e;
+}
+
+@media (min-width: 992px) {
+  .OuterBorder {
+    height: 94%;
+  }
+}
+
+.MidBorder {
+  border: 6px solid #de9b72;
+  height: 100%;
+  width: 100%;
+  padding: 6px;
+  margin: auto;
+}
+
+.InnerBorder {
+  position: relative;
+  border: 2px solid #de9b72;
+  height: 100%;
+  width: 100%;
+  margin: auto;
+}
+
+.VerticalDecoration {
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: auto;
+  width: 11em;
+}
+
+@media (min-width: 768px) {
+  .VerticalDecoration {
+    width: 16em;
+  }
+}
+
+@media (min-width: 992px) {
+  .VerticalDecoration {
+    width: 20em;
+  }
+}
+
+@media (min-width: 1200px) {
+  .VerticalDecoration {
+    width: 27em;
+  }
+}
+
+.Top {
+  top: -30%;
+  -webkit-transform: scaleY(-1);
+  transform: scaleY(-1);
+}
+
+.Bottom {
+  bottom: -30%;
+}
+
+.Image {
+  z-index: 0;
+}
+
+.Photo {
+  object-fit: cover;
+  margin: 0 auto;
+  height: 100%;
 }
