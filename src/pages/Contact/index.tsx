@@ -12,6 +12,8 @@ import Footer from 'pages/Footer'
 import Address from 'pages/Contact/Components/Address'
 import OperatingHours from './Components/OperatingHours'
 import ContactUs from './Components/ContactUs'
+import ContactForm from './Components/ContactForm'
+import Form from './Components/Form'
 
 const Contact = () => {
   return (
@@ -62,26 +64,8 @@ const Contact = () => {
           <a href='mailto:trainingcell@nussucommit.com'>trainingcell@nussucommit.com</a>
         </Box>
       </Grid>
-      <div className={styles.Mailing}>
-        <h2>Subscribe to our mailing list</h2>
-        <Stack spacing={10}>
-        <FormControl>
-          <FormLabel>Email address</FormLabel>
-          <Input type='email' />
-        </FormControl>
-        <FormControl>
-          <FormLabel>Current Year in NUS</FormLabel>
-          <Select>
-            <option value='option1'>Year 1</option>
-            <option value='option2'>Year 2</option>
-            <option value='option3'>Year 3</option>
-            <option value='option3'>Year 4</option>
-            <option value='option3'>Others</option>
-          </Select>
-        </FormControl>
-        <Button width={'20%'} colorScheme={'yellow'}>Subscribe</Button>
-        </Stack>
-      </div>
+      
+      <Form/>
       </div>
       </div>
       <div className={styles.Space}/>
