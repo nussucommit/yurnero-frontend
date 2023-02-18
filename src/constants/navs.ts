@@ -47,7 +47,7 @@ export const navs: NavButton[] = [
       },
       {
         title: 'Student Development Platform (SDP)',
-        path: '/student-development-platform',
+        path: '/sdp',
       },
     ],
   },

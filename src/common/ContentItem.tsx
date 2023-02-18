@@ -18,13 +18,14 @@ const getInputtedStyle: ((item: ContentItem) => any) = (item: ContentItem) => {
 }
 
 export const convertContentItems = (contentItems: string | ContentItem[]) => {
+
     if (typeof(contentItems) === "string") return <p>{contentItems}</p>
 
     return (
         contentItems.map((item, idx) => 
         <React.Fragment key={idx}>
             {item.type === "heading" ? 
-                <h1 style={{fontWeight: "bold", fontSize: "40px", paddingBottom: "30px", paddingTop: "30px"}}><>{item.content}</></h1>
+                <h1 style={{color: "#002A56", fontWeight: "bold", fontSize: "40px", paddingBottom: "30px", paddingTop: "30px"}}><>{item.content}</></h1>
             :
             item.type === "paragraph" ? 
                 <p>
@@ -33,7 +34,7 @@ export const convertContentItems = (contentItems: string | ContentItem[]) => {
             :
             item.type === "text"?
                 (item.attribute?.link?
-                    <a href={item.attribute.link} style={{color: "#0000EE", padding: "0" }}>
+                    <a href={item.attribute.link} style={{color: "#4372D6", padding: "0" }}>
                         <>{item.content}</>
                     </a>
                     :
@@ -50,7 +51,7 @@ export const convertContentItems = (contentItems: string | ContentItem[]) => {
                             <>
                                 {
                                 c.attribute?.link?
-                                    <a key={id} href={c.attribute.link} style={{color: "#0000EE", padding: "0" }}>
+                                    <a key={id} href={c.attribute.link} style={{color: "#4372D6", padding: "0" }}>
                                         <>{c.content}</>
                                     </a>
                                 :
