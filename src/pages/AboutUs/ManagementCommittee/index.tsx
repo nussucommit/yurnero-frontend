@@ -2,9 +2,10 @@ import { Link } from 'react-router-dom'
 import 'bootstrap/dist/css/bootstrap.min.css'
 import styles from './ManagementCommittee.module.css'
 import { Member } from './Member'
-import { directors, comm } from './comm'
+import { useManagementCommittees } from './useManagementCommittees'
 
 const ManagementCommittee = () => {
+  const { chairpersons, committees } = useManagementCommittees()
   return (
     <>
       <div className={styles.ManagementCommittee}>
@@ -20,12 +21,14 @@ const ManagementCommittee = () => {
         </div>
         <div className={styles.MainBody}>
           <div className={styles.DirectorContainer}>
-            {directors.map(dir => {
+            {chairpersons.map(dir => {
+              // @ts-ignore
               return <Member {...dir} />
             })}
           </div>
           <div className={styles.MemberContainer + ' container'}>
-            {comm.map(member => {
+            {committees.map(member => {
+              // @ts-ignore
               return <Member {...member} />
             })}
           </div>
