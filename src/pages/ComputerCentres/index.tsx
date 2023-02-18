@@ -14,21 +14,14 @@ const ComputerCentres = () => {
 
   return (
     <div className={styles.ComputerCentres}>
-      <div className={styles.Colordiff}>
-        <div className={styles.Section}>
-          <div className={styles.title}>
-            <Box
-              lineHeight="1.2"
-              fontWeight="semibold"
-              _hover={{ bg: '#152238' }}
-              padding="20px"
-              width="-webkit-fill-available"
-            >
-              <p className={styles.info}>HOME / SERVICES</p>
-              <h2 className={styles.computerCentreHeader}>Our Computer Centres</h2>
-            </Box>
-          </div>
+      <Header />
+      <div className={styles.TitleBar}>
+        <div className={styles.NavLinks}>
+          <Link to="/">HOME</Link>
+          <p>/</p>
+          <Link to="/computer-centres">SERVICES</Link>
         </div>
+        <h1>Our Computer Centres</h1>
       </div>
       <div className={styles.Content}>
         {isLoading ? (
