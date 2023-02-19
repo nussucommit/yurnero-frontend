@@ -13,20 +13,20 @@ const Footer = () => {
             <ul>
               <li>
                 <strong>
-                  <Link to="/about-us">About Us</Link>
+                  <Link to="/aboutus/overview">About Us</Link>
                 </strong>
               </li>
               <li>
-                <Link to="/about-us/our-family">Our Family</Link>
+                <Link to="/aboutus/our-family">Our Family</Link>
               </li>
               <li>
-                <Link to="/about-us/vision-mission">Vision & Mission</Link>
+                <Link to="/aboutus/vision-and-mission">Vision & Mission</Link>
               </li>
               <li>
-                <Link to="/about-us/our-structure">Our Structure</Link>
+                <Link to="/aboutus/our-structure">Our Structure</Link>
               </li>
               <li>
-                <Link to="/about-us/management-committee">Management Committee</Link>
+                <Link to="/aboutus/management-committee">Management Committee</Link>
               </li>
             </ul>
           </Container>
@@ -55,17 +55,17 @@ const Footer = () => {
             <ul>
               <li>
                 <strong>
-                  <Link to="/events">Events</Link>
+                  <Link to="/events/cyberia">Events</Link>
                 </strong>
               </li>
               <li>
-                <Link to="/cyberia">Cyberia</Link>
+                <Link to="/events/cyberia">Cyberia</Link>
               </li>
               <li>
-                <Link to="/creation">CREATION</Link>
+                <Link to="/events/creation">CREATION</Link>
               </li>
               <li>
-                <Link to="/chariteach">charITeach</Link>
+                <Link to="/events/chariteach">charITeach</Link>
               </li>
             </ul>
           </Container>
