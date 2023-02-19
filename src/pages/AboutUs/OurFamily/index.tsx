@@ -3,8 +3,9 @@ import { useFetchData } from 'common/hooks/useFetchData'
 import { Routes } from 'constants/routes'
 import { Link } from 'react-router-dom'
 import styles from './OurFamily.module.css'
-import { ContentItem, convertContentItems } from 'common/ContentItem'
+import { ContentItem } from 'common/ContentItem'
 import { renderOurFamilyFromApi } from './helper'
+import Header from 'pages/Header'
 
 const URL = Routes.backendRoot + Routes.ourFamily
 
@@ -12,6 +13,7 @@ const OurFamily = () => {
   const [isLoading, content] = useFetchData(URL)
   return (
     <div className={styles.OurFamily}>
+      <Header />
       <div className={styles.TitleBar}>
         <div className={styles.NavLinks}>
           <Link to="/">HOME</Link>
