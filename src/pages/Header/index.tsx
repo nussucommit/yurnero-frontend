@@ -23,17 +23,6 @@ const Header = () => {
               <Navbar />
             </div>
           </div>
-          {/* <div className={styles.searchBar}>
-            {isSearchBarOpen ? (
-              <button onClick={() => setIsSearchBarOpen(false)}>
-                <CloseIcon />
-              </button>
-            ) : (
-              <button onClick={() => setIsSearchBarOpen(true)}>
-                <Search2Icon />
-              </button>
-            )}
-          </div> */}
           <div className={styles.DrawerHeader}>
             {openBurgerMenu ? (
               <button
@@ -55,18 +44,6 @@ const Header = () => {
           </div>
         </div>
         {openBurgerMenu && <BurgerHeader inputValue={inputValue} setInputValue={setInputValue} />}
-        {/* {isSearchBarOpen && (
-          <div className={styles.searchInput}>
-            <Input
-              placeholder="What are you looking for?"
-              value={inputValue}
-              onChange={(e: React.ChangeEvent<HTMLInputElement>) => setInputValue(e.target.value)}
-            />
-            <Button className={styles.btn} colorScheme="yellow" onClick={(val) => {console.log(inputValue)}}>
-                Search
-            </Button>
-          </div>
-        )} */}
       </div>
     </div>
   )
