@@ -9,7 +9,7 @@ export type NavButton = {
 export const navs: NavButton[] = [
   {
     title: 'ABOUT US',
-    path: '/about-us',
+    path: '/aboutus/overview',
     subNav: [
       {
         title: 'Our Family',
