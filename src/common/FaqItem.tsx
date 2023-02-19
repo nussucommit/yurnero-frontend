@@ -1,7 +1,6 @@
 import { CSSProperties } from '@emotion/serialize'
 import * as React from 'react'
 import { ContentItem, getInputtedStyle } from './ContentItem'
-import Collapsible from 'react-collapsible'
 
 export const convertFaqItems = (faqItems: string | ContentItem[], key: string) => {
   return convertContentItems(Object(faqItems)[key] as ContentItem[])
