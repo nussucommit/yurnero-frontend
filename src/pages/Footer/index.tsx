@@ -80,7 +80,8 @@ const Footer = () => {
           </Container>
           <Container className={styles.Img}>
             <a href="https://facebook.com/NUSSUcommIT/">
-              <Image src="/src/images/facebook.png"></Image>
+              <Image src={require('../../images/facebook.png')}></Image>
+              {/* <Image src="/src/images/facebook.png"></Image> */}
             </a>
           </Container>
         </div>
