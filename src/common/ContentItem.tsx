@@ -20,7 +20,7 @@ const getInputtedStyle: (item: ContentItem) => any = (item: ContentItem) => {
 export const convertContentItems = (contentItems: string | ContentItem[]) => {
   if (typeof contentItems === 'string') return <p>{contentItems}</p>
 
-  return contentItems.map((item, idx) => (
+  return contentItems?.map((item, idx) => (
     <React.Fragment key={idx}>
       {item.type === 'heading' ? (
         <h1
