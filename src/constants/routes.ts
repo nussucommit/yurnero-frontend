@@ -1,6 +1,6 @@
 export enum Routes {
   // Define your routes here
-  backendRoot = 'https://nussucommit-backend.herokuapp.com',
+  backendRoot = 'http://localhost:8000',
   index = '/',
   aboutUs = '/aboutus/overview',
   ourFamily = '/aboutus/our-family',
