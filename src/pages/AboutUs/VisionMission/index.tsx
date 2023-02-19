@@ -6,6 +6,7 @@ import { Routes } from 'constants/routes'
 import { useFetchData } from 'common/hooks/useFetchData'
 import { CircularProgress } from '@chakra-ui/progress'
 import { ContentItem, convertContentItems } from 'common/ContentItem'
+import Header from 'pages/Header'
 
 const URL = Routes.backendRoot + Routes.visionMission
 
@@ -13,6 +14,7 @@ const VisionMission = () => {
   const [isLoading, content] = useFetchData(URL)
   return (
     <div className={styles.VisionMission}>
+      <Header />
       <div className={styles.TitleBar}>
         <div className={styles.NavLinks}>
           <Link to="/">HOME</Link>

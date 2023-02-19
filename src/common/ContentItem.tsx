@@ -9,7 +9,7 @@ export type ContentItem = {
   result?: any
 }
 
-const getInputtedStyle: (item: ContentItem) => any = (item: ContentItem) => {
+export const getInputtedStyle: (item: ContentItem) => any = (item: ContentItem) => {
   return {
     fontWeight: item.attribute?.bold ? 'bold' : 'normal',
     color: item.attribute?.color,

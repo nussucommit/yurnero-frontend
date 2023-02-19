@@ -1,8 +1,8 @@
-* {
+/* * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-}
+} */
 
 .OurFamily {
   font-size: 1.3rem;
@@ -12,7 +12,6 @@
 .TitleBar {
   background-color: #002a56;
   color: white;
-  /* padding: 24px 86px; */
   padding: 24px 6%;
 }
 

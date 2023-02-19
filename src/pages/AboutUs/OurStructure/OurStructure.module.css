@@ -6,7 +6,6 @@
 .TitleBar {
   background-color: #002a56;
   color: white;
-  /* padding: 24px 86px; */
   padding: 24px 6%;
 }
 
@@ -36,7 +35,7 @@
   margin-bottom: 50px;
 }
 
-.OurStructure img {
+.Content img {
   width: 80%;
   margin: 40px auto;
   border-radius: 1%;

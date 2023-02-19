@@ -1,0 +1,70 @@
+.feedback {
+  font-size: 1.2rem;
+  color: #484848;
+}
+
+.TitleBar {
+  background-color: #002a56;
+  color: white;
+  padding: 24px 6%;
+}
+
+.TitleBar h1 {
+  font-weight: 600;
+  font-size: 54px;
+}
+
+.NavLinks {
+  display: flex;
+  text-align: left;
+  font-size: 0.75em;
+  padding-top: 12px;
+  padding-bottom: 20px;
+}
+
+.NavLinks p {
+  padding-right: 15px;
+}
+
+.feedbackform {
+  display: flex;
+  flex-direction: column;
+  padding: 64px 20%;
+  background-color: #f2f2f2;
+}
+
+.feedbackheader {
+  margin-bottom: 5%;
+}
+
+.formgroup {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 2%;
+}
+
+.sectionheader {
+  font-weight: bold;
+  margin-bottom: 1%;
+}
+
+.userinput {
+  padding: 1.25%;
+  font-size: 1.25rem;
+}
+
+.messageinput {
+  padding: 1.25%;
+  font-size: 1.25rem;
+  height: 15vh;
+}
+
+.submitbutton {
+  padding: 10px 20px;
+  background-color: #ffb200 !important;
+  color: black;
+  font-size: 1.25rem;
+  border: none;
+  cursor: pointer;
+  width: 10vw;
+}
