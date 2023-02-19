@@ -53,7 +53,7 @@ export const navs: NavButton[] = [
   },
   {
     title: 'EVENTS',
-    path: '/events',
+    path: '/events/cyberia',
     subNav: [
       {
         title: 'Cyberia',
