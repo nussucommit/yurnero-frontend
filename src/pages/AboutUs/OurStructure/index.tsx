@@ -3,11 +3,13 @@ import 'bootstrap/dist/css/bootstrap.min.css'
 import styles from './OurStructure.module.css'
 import TeamCard from './TeamCard'
 import { useOurStructure } from './useOurStructure'
+import Header from 'pages/Header'
 
 const OurStructure = () => {
   const { overview, teams } = useOurStructure()
   return (
     <div className={styles.OurStructure}>
+      <Header />
       <div className={styles.TitleBar}>
         <div className={styles.NavLinks}>
           <Link to="/">HOME</Link>

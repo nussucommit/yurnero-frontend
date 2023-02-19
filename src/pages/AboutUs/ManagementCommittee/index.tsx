@@ -3,12 +3,14 @@ import 'bootstrap/dist/css/bootstrap.min.css'
 import styles from './ManagementCommittee.module.css'
 import { Member } from './Member'
 import { useManagementCommittees } from './useManagementCommittees'
+import Header from 'pages/Header'
 
 const ManagementCommittee = () => {
   const { chairpersons, committees } = useManagementCommittees()
   return (
     <>
       <div className={styles.ManagementCommittee}>
+        <Header />
         <div className={styles.TitleBar}>
           <div className={styles.NavLinks}>
             <Link to="/">HOME</Link>
