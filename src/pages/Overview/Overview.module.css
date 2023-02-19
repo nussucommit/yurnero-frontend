@@ -30,7 +30,12 @@
   font-size: 3rem;
   line-height: 3.8rem;
   color: #002a56;
-  padding-bottom: 20px;
+}
+
+.HomeHeader {
+  font-weight: 500;
+  font-size: 1.2rem;
+  color: #484848;
 }
 
 .Section img {
