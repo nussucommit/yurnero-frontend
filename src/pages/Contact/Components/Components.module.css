@@ -18,33 +18,31 @@
   font-weight: 600;
   font-size: 3.4rem;
 }
+
 .TitleBar {
-  background-color: #002a56;
-  color: white;
-  padding: 24px 6%;
+  background-color: white;
+  /* padding: 24px 86px; */
+  padding-top: 0vh;
+  padding-left: 6.5%;
+  line-height: 5.5rem;
 }
 
 .TitleBar h1 {
   font-weight: 600;
-  font-size: 54px;
+  font-size: 5.6rem;
+  letter-spacing: -0.4rem;
 }
 
 .NavLinks {
   display: flex;
   text-align: left;
   font-size: 0.75em;
-  padding-top: 12px;
-  padding-bottom: 20px;
+  padding-top: 2.2vh;
+  padding-bottom: 3.5vh;
 }
 
 .NavLinks p {
-  padding-right: 15px;
-}
-
-.Title {
-  font-weight: 600;
-  font-size: 5.6rem;
-  letter-spacing: -0.4rem;
+  padding-right: 2.35px;
 }
 
 .Content {

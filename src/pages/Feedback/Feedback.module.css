@@ -35,6 +35,7 @@
 
 .feedbackheader {
   margin-bottom: 5%;
+  font-size: 1.5rem;
 }
 
 .formgroup {
@@ -51,12 +52,14 @@
 .userinput {
   padding: 1.25%;
   font-size: 1.25rem;
+  border-color: #484848 !important;
 }
 
-.messageinput {
+.message {
   padding: 1.25%;
   font-size: 1.25rem;
-  height: 15vh;
+  height: 10vh !important;
+  border-color: #484848 !important;
 }
 
 .submitbutton {
@@ -66,5 +69,5 @@
   font-size: 1.25rem;
   border: none;
   cursor: pointer;
-  width: 10vw;
+  width: 10vw !important;
 }
